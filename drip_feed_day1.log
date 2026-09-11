@@ -1,0 +1,5 @@
+2026-07-03 10:45:14,488 [INFO] Fresh drip-feed target universe: 75 tickers (seed=20260703, pool=277 after excluding 24 already tested)
+2026-07-03 10:45:14,612 [ERROR] Alpha Vantage returned no usable data for AME: We have detected your API key as <REDACTED-SEE-ENV> and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2026-07-03 10:45:14,615 [WARNING] AME: empty result -- likely daily quota exhausted, stopping for today
+2026-07-03 10:45:14,615 [INFO] Summary: 0 fetched today, 0 already cached from before, 75 remaining for future days
+2026-07-03 10:45:14,615 [INFO] At 25/day: ~3 more day(s) needed to complete this 75-ticker batch

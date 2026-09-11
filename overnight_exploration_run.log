@@ -1,0 +1,31 @@
+2026-07-02 03:54:25,947 [INFO] SPY: 29711 bars
+2026-07-02 03:54:26,072 [INFO] QQQ: 33134 bars
+2026-07-02 03:54:26,180 [INFO] BTCUSD: 35755 bars
+2026-07-02 03:54:26,252 [INFO] GLD: 2439 bars
+2026-07-02 03:54:26,321 [INFO] USO: 2428 bars
+2026-07-02 03:54:45,611 [INFO] BTCUSD 4Hour (for MTF variant): 8939 bars
+2026-07-02 03:54:45,612 [INFO] 12 walk-forward windows
+2026-07-02 03:54:45,612 [INFO] 
+2026-07-02 03:55:03,086 [INFO] - **SPY / baseline**: 60 (param,window) combos tested, 9 rejected by the 30% IS/OOS deviation rule. 5 distinct param sets survived.
+2026-07-02 03:55:12,016 [INFO]   best plateau params={'sma_period': 20, 'std_dev_mult': 2.0}: mean_oos_sharpe=-8.543 std=0.550 -> stitched Sharpe=-8.371 PF=0.219 MaxDD=100.0% MC_DD95=100.0% trades=1797 cost0.15%=-100.0%
+2026-07-02 03:55:28,651 [INFO] - **SPY / cooldown5**: 60 (param,window) combos tested, 23 rejected by the 30% IS/OOS deviation rule. 5 distinct param sets survived.
+2026-07-02 03:55:35,900 [INFO]   best plateau params={'sma_period': 20, 'std_dev_mult': 2.0}: mean_oos_sharpe=-8.790 std=0.754 -> stitched Sharpe=-8.170 PF=0.235 MaxDD=100.0% MC_DD95=100.0% trades=909 cost0.15%=-100.0%
+2026-07-02 03:55:51,838 [INFO] - **SPY / trendfilter200**: 60 (param,window) combos tested, 23 rejected by the 30% IS/OOS deviation rule. 5 distinct param sets survived.
+2026-07-02 03:55:58,903 [INFO]   best plateau params={'sma_period': 20, 'std_dev_mult': 2.0, 'trend_sma_period': 200}: mean_oos_sharpe=-4.185 std=0.750 -> stitched Sharpe=-4.288 PF=0.235 MaxDD=99.9% MC_DD95=100.0% trades=495 cost0.
+2026-07-02 03:56:19,901 [INFO] - **QQQ / baseline**: 60 (param,window) combos tested, 29 rejected by the 30% IS/OOS deviation rule. 5 distinct param sets survived.
+2026-07-02 03:56:28,202 [INFO]   best plateau params={'sma_period': 20, 'std_dev_mult': 2.4}: mean_oos_sharpe=-5.995 std=0.590 -> stitched Sharpe=-5.967 PF=0.333 MaxDD=100.0% MC_DD95=100.0% trades=1065 cost0.15%=-100.0%
+2026-07-02 03:56:46,762 [INFO] - **QQQ / cooldown5**: 60 (param,window) combos tested, 30 rejected by the 30% IS/OOS deviation rule. 5 distinct param sets survived.
+2026-07-02 03:56:54,857 [INFO]   best plateau params={'sma_period': 20, 'std_dev_mult': 2.4}: mean_oos_sharpe=-4.885 std=1.044 -> stitched Sharpe=-5.517 PF=0.343 MaxDD=99.9% MC_DD95=100.0% trades=635 cost0.15%=-100.0%
+2026-07-02 03:57:13,651 [INFO] - **QQQ / trendfilter200**: 60 (param,window) combos tested, 35 rejected by the 30% IS/OOS deviation rule. 5 distinct param sets survived.
+2026-07-02 03:57:21,601 [INFO]   best plateau params={'sma_period': 20, 'std_dev_mult': 2.4, 'trend_sma_period': 200}: mean_oos_sharpe=-3.310 std=0.337 -> stitched Sharpe=-2.877 PF=0.354 MaxDD=96.5% MC_DD95=98.1% trades=293 cost0.1
+2026-07-02 03:57:37,300 [INFO] - **BTCUSD / baseline breakout**: 48 combos, 43 rejected by anti-overfitting rule. 1 param sets survived.
+2026-07-02 03:57:46,242 [INFO]   best params={'lookback': 20, 'trailing_atr_mult': 3.0, 'volume_mult': 1.5}: Sharpe=-0.500 PF=0.830 MaxDD=83.4% MC_DD95=94.3% trades=545
+2026-07-02 03:58:01,570 [INFO] - **BTCUSD / MTF-confirmed breakout**: 48 combos, 46 rejected. 0 param sets survived.
+2026-07-02 03:58:01,571 [INFO] 
+2026-07-02 03:58:03,185 [INFO] - **GLD / trend_following wide-grid plateau search**: 72 combos, 68 rejected. Plateau ranking (mean_oos_sharpe - std):
+2026-07-02 03:58:05,050 [INFO] - **GLD / trend_following_volfilter**: 72 combos, 69 rejected. 0 param sets survived.
+2026-07-02 03:58:06,881 [INFO] - **USO / trend_following wide-grid plateau search**: 72 combos, 70 rejected. Plateau ranking (mean_oos_sharpe - std):
+2026-07-02 03:58:08,745 [INFO] - **USO / trend_following_volfilter**: 72 combos, 66 rejected. 1 param sets survived.
+2026-07-02 03:58:09,413 [INFO]   best params={'fast_ema': 50, 'slow_ema': 200, 'trailing_atr_mult': 4.0, 'vol_percentile_min': 0.25}: Sharpe=-0.324 PF=0.278 MaxDD=15.0% MC_DD95=15.2% trades=10 cost0.15%=-12.6%
+2026-07-02 03:58:09,414 [INFO] 
+2026-07-02 03:58:09,414 [INFO] DONE. 8 candidates written to exploration_candidates.json

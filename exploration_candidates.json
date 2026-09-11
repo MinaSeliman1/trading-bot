@@ -1,0 +1,159 @@
+[
+  {
+    "label": "SPY mean_reversion [baseline]",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0
+    },
+    "sharpe": -8.370963605510578,
+    "sortino": -8.165290469081736,
+    "profit_factor": 0.21907658858479986,
+    "max_drawdown": 0.9999999999918314,
+    "trade_count": 1797,
+    "mc_dd95": 0.9999999999982785,
+    "mc_sharpe_p5": -18.10239020479672,
+    "cost_0_05": -0.9999764588802788,
+    "cost_0_10": -0.9999999999918314,
+    "cost_0_15": -1.0,
+    "is_oos_stability_std": 0.5503599957676637,
+    "n_windows_survived": 9
+  },
+  {
+    "label": "SPY mean_reversion [cooldown5]",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0
+    },
+    "sharpe": -8.169628066804034,
+    "sortino": -9.745803833813683,
+    "profit_factor": 0.23451994721635727,
+    "max_drawdown": 0.9999962354172669,
+    "trade_count": 909,
+    "mc_dd95": 0.9999987167228932,
+    "mc_sharpe_p5": -12.666276147890155,
+    "cost_0_05": -0.9966130307632318,
+    "cost_0_10": -0.9999962354172669,
+    "cost_0_15": -0.9999999973248843,
+    "is_oos_stability_std": 0.7537999103561794,
+    "n_windows_survived": 3
+  },
+  {
+    "label": "SPY mean_reversion [trendfilter200]",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0,
+      "trend_sma_period": 200
+    },
+    "sharpe": -4.288007868936295,
+    "sortino": -2.9159811364633383,
+    "profit_factor": 0.2350421415612245,
+    "max_drawdown": 0.9989798755278833,
+    "trade_count": 495,
+    "mc_dd95": 0.9995094292336237,
+    "mc_sharpe_p5": -9.744939215073533,
+    "cost_0_05": -0.9380160535153483,
+    "cost_0_10": -0.9989235218907505,
+    "cost_0_15": -0.9999938633499323,
+    "is_oos_stability_std": 0.7499111347765081,
+    "n_windows_survived": 9
+  },
+  {
+    "label": "QQQ mean_reversion [baseline]",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.4
+    },
+    "sharpe": -5.966953946520828,
+    "sortino": -5.909443647397843,
+    "profit_factor": 0.33314084701754776,
+    "max_drawdown": 0.9999942971951463,
+    "trade_count": 1065,
+    "mc_dd95": 0.9999983472011316,
+    "mc_sharpe_p5": -10.604106582342538,
+    "cost_0_05": -0.9961901147687688,
+    "cost_0_10": -0.9999939256443474,
+    "cost_0_15": -0.9999999938602289,
+    "is_oos_stability_std": 0.5898635890531616,
+    "n_windows_survived": 4
+  },
+  {
+    "label": "QQQ mean_reversion [cooldown5]",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.4
+    },
+    "sharpe": -5.517093553378927,
+    "sortino": -7.0982946576013894,
+    "profit_factor": 0.3428477661982385,
+    "max_drawdown": 0.999156552943434,
+    "trade_count": 635,
+    "mc_dd95": 0.9996617897790461,
+    "mc_sharpe_p5": -8.162180619647431,
+    "cost_0_05": -0.9723422493316951,
+    "cost_0_10": -0.9990780987581646,
+    "cost_0_15": -0.9999752239426161,
+    "is_oos_stability_std": 1.0436178665840987,
+    "n_windows_survived": 5
+  },
+  {
+    "label": "QQQ mean_reversion [trendfilter200]",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.4,
+      "trend_sma_period": 200
+    },
+    "sharpe": -2.8772638528223315,
+    "sortino": -1.675057154364017,
+    "profit_factor": 0.3538801370928471,
+    "max_drawdown": 0.9653186861412546,
+    "trade_count": 293,
+    "mc_dd95": 0.9807815851124765,
+    "mc_sharpe_p5": -5.781075351954879,
+    "cost_0_05": -0.7010701405128794,
+    "cost_0_10": -0.9613082080328752,
+    "cost_0_15": -0.9942112592194998,
+    "is_oos_stability_std": 0.3368593944313678,
+    "n_windows_survived": 5
+  },
+  {
+    "label": "BTCUSD momentum_breakout [baseline]",
+    "params": {
+      "lookback": 20,
+      "trailing_atr_mult": 3.0,
+      "volume_mult": 1.5
+    },
+    "sharpe": -0.5000935294064256,
+    "sortino": -1.0635367771399569,
+    "profit_factor": 0.8296367489566103,
+    "max_drawdown": 0.833884299668921,
+    "trade_count": 545,
+    "mc_dd95": 0.943096227585016,
+    "mc_sharpe_p5": -1.828308274475944,
+    "cost_0_05": -0.3277253439001644,
+    "cost_0_10": -0.7253072651167297,
+    "cost_0_15": -0.9143686784344933,
+    "is_oos_stability_std": 0.17001692867752194,
+    "n_windows_survived": 3
+  },
+  {
+    "label": "USO trend_following [volfilter]",
+    "params": {
+      "fast_ema": 50,
+      "slow_ema": 200,
+      "trailing_atr_mult": 4.0,
+      "vol_percentile_min": 0.25
+    },
+    "sharpe": -0.32378747423472665,
+    "sortino": -0.11757096566202657,
+    "profit_factor": 0.2784760073941306,
+    "max_drawdown": 0.1500876907066037,
+    "trade_count": 10,
+    "mc_dd95": 0.15226784205770458,
+    "mc_sharpe_p5": -12.301559663692837,
+    "cost_0_05": -0.08374035005468627,
+    "cost_0_10": -0.09040997011218332,
+    "cost_0_15": -0.12638014208550363,
+    "is_oos_stability_std": 0.5585599911381308,
+    "n_windows_survived": 2
+  }
+]

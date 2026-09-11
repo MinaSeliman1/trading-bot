@@ -1,0 +1,13 @@
+2026-07-14 07:51:32,769 [INFO] Fresh drip-feed target universe: 75 tickers (seed=20260703, pool=277 after excluding 24 already tested)
+2026-07-14 07:51:32,944 [ERROR] Alpha Vantage returned no usable data for BK: response missing/empty quarterlyEarnings
+2026-07-14 07:51:32,945 [WARNING] BK: no usable data (not a quota issue) -- skipping this symbol, continuing batch
+2026-07-14 07:51:48,053 [ERROR] Alpha Vantage returned no usable data for DFS: response missing/empty quarterlyEarnings
+2026-07-14 07:51:48,055 [WARNING] DFS: no usable data (not a quota issue) -- skipping this symbol, continuing batch
+2026-07-14 07:52:03,223 [INFO] USB: 121 quarters fetched (1 fetched so far today)
+2026-07-14 07:52:18,297 [INFO] VRSK: 67 quarters fetched (2 fetched so far today)
+2026-07-14 07:52:33,404 [INFO] WDC: 121 quarters fetched (3 fetched so far today)
+2026-07-14 07:52:48,513 [INFO] WHR: 121 quarters fetched (4 fetched so far today)
+2026-07-14 07:53:03,768 [INFO] ZBH: 100 quarters fetched (5 fetched so far today)
+2026-07-14 07:53:18,894 [INFO] ZTS: 54 quarters fetched (6 fetched so far today)
+2026-07-14 07:53:18,895 [INFO] Summary: 6 fetched today, 67 already cached from before, 2 confirmed no-data symbols, 0 remaining for future days
+2026-07-14 07:53:18,895 [INFO] No-data symbols (won't be retried): ['BK', 'DFS']

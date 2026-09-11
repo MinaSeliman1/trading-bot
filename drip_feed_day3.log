@@ -1,0 +1,29 @@
+2026-07-05 00:00:25,462 [INFO] Fresh drip-feed target universe: 75 tickers (seed=20260703, pool=277 after excluding 24 already tested)
+2026-07-05 00:00:25,574 [ERROR] Alpha Vantage returned no usable data for BK: response missing/empty quarterlyEarnings
+2026-07-05 00:00:25,575 [WARNING] BK: empty result -- likely daily quota exhausted, stopping for today
+2026-07-05 00:00:25,576 [INFO] Summary: 0 fetched today, 6 already cached from before, 69 remaining for future days
+2026-07-05 00:00:25,576 [INFO] At 25/day: ~3 more day(s) needed to complete this 75-ticker batch
+2026-07-05 00:02:22,730 [INFO] Fresh drip-feed target universe: 75 tickers (seed=20260703, pool=277 after excluding 24 already tested)
+2026-07-05 00:02:22,833 [ERROR] Alpha Vantage returned no usable data for BK: response missing/empty quarterlyEarnings
+2026-07-05 00:02:22,835 [WARNING] BK: no usable data (not a quota issue) -- skipping this symbol, continuing batch
+2026-07-05 00:02:38,052 [INFO] CDW: 52 quarters fetched (1 fetched so far today)
+2026-07-05 00:02:53,168 [INFO] CLX: 121 quarters fetched (2 fetched so far today)
+2026-07-05 00:03:08,403 [INFO] CMI: 121 quarters fetched (3 fetched so far today)
+2026-07-05 00:03:23,515 [INFO] CPRT: 121 quarters fetched (4 fetched so far today)
+2026-07-05 00:03:38,647 [INFO] CTAS: 121 quarters fetched (5 fetched so far today)
+2026-07-05 00:03:53,759 [INFO] CTSH: 112 quarters fetched (6 fetched so far today)
+2026-07-05 00:04:08,857 [ERROR] Alpha Vantage returned no usable data for DFS: response missing/empty quarterlyEarnings
+2026-07-05 00:04:08,860 [WARNING] DFS: no usable data (not a quota issue) -- skipping this symbol, continuing batch
+2026-07-05 00:04:23,994 [INFO] DGX: 118 quarters fetched (7 fetched so far today)
+2026-07-05 00:04:39,103 [INFO] DHI: 121 quarters fetched (8 fetched so far today)
+2026-07-05 00:04:54,211 [INFO] DPZ: 88 quarters fetched (9 fetched so far today)
+2026-07-05 00:05:09,340 [INFO] ELV: 99 quarters fetched (10 fetched so far today)
+2026-07-05 00:05:24,529 [INFO] EMR: 121 quarters fetched (11 fetched so far today)
+2026-07-05 00:05:39,643 [INFO] EOG: 121 quarters fetched (12 fetched so far today)
+2026-07-05 00:05:54,755 [INFO] EQT: 121 quarters fetched (13 fetched so far today)
+2026-07-05 00:06:09,858 [INFO] ETN: 121 quarters fetched (14 fetched so far today)
+2026-07-05 00:06:24,959 [ERROR] Alpha Vantage rate limit hit for FDS: We have detected your API key as <REDACTED-SEE-ENV> and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2026-07-05 00:06:24,959 [WARNING] Daily quota exhausted, stopping for today (reached FDS)
+2026-07-05 00:06:24,961 [INFO] Summary: 14 fetched today, 7 already cached from before, 2 confirmed no-data symbols, 52 remaining for future days
+2026-07-05 00:06:24,961 [INFO] No-data symbols (won't be retried): ['BK', 'DFS']
+2026-07-05 00:06:24,961 [INFO] At ~14/day (today's observed rate): ~4 more day(s) needed

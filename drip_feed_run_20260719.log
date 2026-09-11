@@ -1,0 +1,24 @@
+2026-07-19 22:54:47,330 [INFO] Fundamentals drip-feed target: 97 tickers (reusing the existing PEAD earnings universe)
+2026-07-19 22:54:47,505 [INFO] JPM: sector=FINANCIAL SERVICES industry=BANKS - DIVERSIFIED (1 symbols fetched so far today)
+2026-07-19 22:55:02,579 [INFO] ABBV: sector=HEALTHCARE industry=DRUG MANUFACTURERS - GENERAL (2 symbols fetched so far today)
+2026-07-19 22:55:17,700 [INFO] AME: sector=INDUSTRIALS industry=SPECIALTY INDUSTRIAL MACHINERY (3 symbols fetched so far today)
+2026-07-19 22:55:32,798 [INFO] AMGN: sector=HEALTHCARE industry=DRUG MANUFACTURERS - GENERAL (4 symbols fetched so far today)
+2026-07-19 22:55:47,927 [INFO] AON: sector=FINANCIAL SERVICES industry=INSURANCE BROKERS (5 symbols fetched so far today)
+2026-07-19 22:56:03,065 [INFO] AXON: sector=INDUSTRIALS industry=AEROSPACE & DEFENSE (6 symbols fetched so far today)
+2026-07-19 22:56:18,162 [INFO] AXP: sector=FINANCIAL SERVICES industry=CREDIT SERVICES (7 symbols fetched so far today)
+2026-07-19 22:56:33,282 [INFO] BAC: sector=FINANCIAL SERVICES industry=BANKS - DIVERSIFIED (8 symbols fetched so far today)
+2026-07-19 22:56:48,400 [INFO] BAX: sector=HEALTHCARE industry=MEDICAL INSTRUMENTS & SUPPLIES (9 symbols fetched so far today)
+2026-07-19 22:57:03,518 [INFO] BBWI: sector=CONSUMER CYCLICAL industry=SPECIALTY RETAIL (10 symbols fetched so far today)
+2026-07-19 22:57:18,646 [INFO] CAT: sector=INDUSTRIALS industry=FARM & HEAVY CONSTRUCTION MACHINERY (11 symbols fetched so far today)
+2026-07-19 22:58:04,047 [INFO] CCL: sector=CONSUMER CYCLICAL industry=TRAVEL SERVICES (12 symbols fetched so far today)
+2026-07-19 22:58:49,914 [INFO] CDW: sector=TECHNOLOGY industry=INFORMATION TECHNOLOGY SERVICES (13 symbols fetched so far today)
+2026-07-19 22:59:35,343 [INFO] CLX: sector=CONSUMER DEFENSIVE industry=HOUSEHOLD & PERSONAL PRODUCTS (14 symbols fetched so far today)
+2026-07-19 23:43:52,919 [INFO] Fundamentals drip-feed target: 97 tickers (reusing the existing PEAD earnings universe)
+2026-07-19 23:44:23,339 [INFO] CMI: sector=INDUSTRIALS industry=SPECIALTY INDUSTRIAL MACHINERY (1 symbols fetched so far today)
+2026-07-19 23:45:08,669 [ERROR] Alpha Vantage rate limit hit for COST/overview: We have detected your API key as <REDACTED-SEE-ENV> and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2026-07-19 23:45:08,669 [WARNING] Daily quota exhausted, stopping for today (reached COST)
+2026-07-19 23:45:08,670 [INFO] Summary: 1 fetched today, 14 already cached, 0 confirmed no-data, 82 remaining for future days
+2026-07-19 23:45:08,670 [INFO] At ~1/day (today's observed rate): ~82 more day(s) needed
+2026-07-19 23:45:51,503 [INFO] 
+2026-07-19 23:45:51,504 [INFO] - Usable tickers (earnings + balance_sheet + income_statement + overview all cached): 15 of 97
+2026-07-19 23:45:51,504 [INFO] - **Below MIN_UNIVERSE_SIZE (40) -- refusing to run a backtest.** A quintile/decile on 15 tickers is not statistically meaningful (see lessons_learned.md). Waiting for the drip-feed to progress furthe

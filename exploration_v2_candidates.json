@@ -1,0 +1,257 @@
+[
+  {
+    "label": "APA mean_reversion_trendfilter [mid-cap universe]",
+    "direction": "1-universe-equity",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0,
+      "trend_sma_period": 200
+    },
+    "sharpe": -1.166489896118648,
+    "profit_factor": 0.7310255280533653,
+    "max_drawdown": 0.7849468165515,
+    "trade_count": 457,
+    "mc_dd95": 0.9146094834574082,
+    "cost_0_15": -0.920089287030404
+  },
+  {
+    "label": "KSS mean_reversion_trendfilter [mid-cap universe]",
+    "direction": "1-universe-equity",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0,
+      "trend_sma_period": 200
+    },
+    "sharpe": -1.1844263230198573,
+    "profit_factor": 0.7027828774632222,
+    "max_drawdown": 0.887577803256447,
+    "trade_count": 439,
+    "mc_dd95": 0.95742633625809,
+    "cost_0_15": -0.9199653278781955
+  },
+  {
+    "label": "ANF mean_reversion_trendfilter [mid-cap universe]",
+    "direction": "1-universe-equity",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 1.5,
+      "trend_sma_period": 200
+    },
+    "sharpe": -1.2915032244208906,
+    "profit_factor": 0.7307515663913243,
+    "max_drawdown": 0.9750123255932984,
+    "trade_count": 772,
+    "mc_dd95": 0.995391060572661,
+    "cost_0_15": -0.9927077830956547
+  },
+  {
+    "label": "ALK mean_reversion_trendfilter [mid-cap universe]",
+    "direction": "1-universe-equity",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0,
+      "trend_sma_period": 200
+    },
+    "sharpe": -1.3199250609283135,
+    "profit_factor": 0.7392005933659915,
+    "max_drawdown": 0.8982636203636577,
+    "trade_count": 456,
+    "mc_dd95": 0.9603354034019168,
+    "cost_0_15": -0.9666307704542982
+  },
+  {
+    "label": "URBN mean_reversion_trendfilter [mid-cap universe]",
+    "direction": "1-universe-equity",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0,
+      "trend_sma_period": 200
+    },
+    "sharpe": -1.6081125994546916,
+    "profit_factor": 0.6638363107718399,
+    "max_drawdown": 0.9093199334594859,
+    "trade_count": 448,
+    "mc_dd95": 0.9546055109822635,
+    "cost_0_15": -0.9662093578510857
+  },
+  {
+    "label": "AVAX/USD momentum_breakout [crypto alt universe]",
+    "direction": "1-universe-crypto",
+    "params": {
+      "lookback": 20,
+      "trailing_atr_mult": 3.0,
+      "volume_mult": 1.5
+    },
+    "sharpe": 0.37808555997312626,
+    "profit_factor": 1.123835101270687,
+    "max_drawdown": 0.4271422652069983,
+    "trade_count": 480,
+    "mc_dd95": 0.6842964231824407,
+    "cost_0_15": -0.15414904806209917
+  },
+  {
+    "label": "ETH/USD momentum_breakout [crypto alt universe]",
+    "direction": "1-universe-crypto",
+    "params": {
+      "lookback": 20,
+      "trailing_atr_mult": 2.5,
+      "volume_mult": 1.5
+    },
+    "sharpe": 0.08540311438199434,
+    "profit_factor": 0.9869581152715602,
+    "max_drawdown": 0.5873221209575008,
+    "trade_count": 563,
+    "mc_dd95": 0.8406949648597107,
+    "cost_0_15": -0.5914449785105783
+  },
+  {
+    "label": "LINK/USD momentum_breakout [crypto alt universe]",
+    "direction": "1-universe-crypto",
+    "params": {
+      "lookback": 20,
+      "trailing_atr_mult": 2.5,
+      "volume_mult": 1.5
+    },
+    "sharpe": -0.442344927427506,
+    "profit_factor": 0.8484231545603712,
+    "max_drawdown": 0.5830029674246142,
+    "trade_count": 445,
+    "mc_dd95": 0.855507070438158,
+    "cost_0_15": -0.719248787894279
+  },
+  {
+    "label": "AAVE/USD momentum_breakout [crypto alt universe]",
+    "direction": "1-universe-crypto",
+    "params": {
+      "lookback": 20,
+      "trailing_atr_mult": 2.0,
+      "volume_mult": 1.5
+    },
+    "sharpe": -0.6995264067105086,
+    "profit_factor": 0.8087408501893368,
+    "max_drawdown": 0.7954605375121652,
+    "trade_count": 498,
+    "mc_dd95": 0.9034107848774574,
+    "cost_0_15": -0.7778554857738738
+  },
+  {
+    "label": "CRV/USD momentum_breakout [crypto alt universe]",
+    "direction": "1-universe-crypto",
+    "params": {
+      "lookback": 20,
+      "trailing_atr_mult": 2.5,
+      "volume_mult": 1.5
+    },
+    "sharpe": -0.8656147864509076,
+    "profit_factor": 0.7595415231479407,
+    "max_drawdown": 0.5735897473187731,
+    "trade_count": 240,
+    "mc_dd95": 0.7839510652348517,
+    "cost_0_15": -0.5674745023350125
+  },
+  {
+    "label": "META mean_reversion_trendfilter [daily bars]",
+    "direction": "2-daily-timeframe",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0,
+      "trend_sma_period": 200
+    },
+    "sharpe": 1.2000383473668235,
+    "profit_factor": Infinity,
+    "max_drawdown": 0.023025065807485763,
+    "trade_count": 8,
+    "mc_dd95": 0.0,
+    "cost_0_15": 0.14119485879567795
+  },
+  {
+    "label": "NVDA mean_reversion_trendfilter [daily bars]",
+    "direction": "2-daily-timeframe",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 1.5,
+      "trend_sma_period": 200
+    },
+    "sharpe": 0.9745223875526757,
+    "profit_factor": 2.3376799592248143,
+    "max_drawdown": 0.040270004339906094,
+    "trade_count": 31,
+    "mc_dd95": 0.08673417490285647,
+    "cost_0_15": 0.19413473335285691
+  },
+  {
+    "label": "COP mean_reversion_trendfilter [daily bars]",
+    "direction": "2-daily-timeframe",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 1.5,
+      "trend_sma_period": 200
+    },
+    "sharpe": 0.9312751262931397,
+    "profit_factor": 2.405577354219087,
+    "max_drawdown": 0.04801800519798943,
+    "trade_count": 23,
+    "mc_dd95": 0.07224955352240603,
+    "cost_0_15": 0.1618508819603739
+  },
+  {
+    "label": "NKE mean_reversion_trendfilter [daily bars]",
+    "direction": "2-daily-timeframe",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 1.5,
+      "trend_sma_period": 200
+    },
+    "sharpe": 0.6607689264243884,
+    "profit_factor": 1.6892031513229322,
+    "max_drawdown": 0.04914171600307347,
+    "trade_count": 30,
+    "mc_dd95": 0.11764402210550845,
+    "cost_0_15": 0.11635786882003862
+  },
+  {
+    "label": "GE mean_reversion_trendfilter [daily bars]",
+    "direction": "2-daily-timeframe",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 1.5,
+      "trend_sma_period": 200
+    },
+    "sharpe": 0.6250427813155243,
+    "profit_factor": 1.9092333393183036,
+    "max_drawdown": 0.06482225334260165,
+    "trade_count": 19,
+    "mc_dd95": 0.10633559973123984,
+    "cost_0_15": 0.10050297388681773
+  },
+  {
+    "label": "SPY mean_reversion+trendfilter+macrogate",
+    "direction": "4-macro-gate",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.0,
+      "trend_sma_period": 200
+    },
+    "sharpe": -4.152390377165508,
+    "profit_factor": 0.2396670650681275,
+    "max_drawdown": 0.9985940330892654,
+    "trade_count": 476,
+    "mc_dd95": 0.9993536413526725,
+    "cost_0_15": -0.9999908216166173
+  },
+  {
+    "label": "QQQ mean_reversion+trendfilter+macrogate",
+    "direction": "4-macro-gate",
+    "params": {
+      "sma_period": 20,
+      "std_dev_mult": 2.4,
+      "trend_sma_period": 200
+    },
+    "sharpe": -2.8763714794817807,
+    "profit_factor": 0.34161840606564176,
+    "max_drawdown": 0.9625558132340535,
+    "trade_count": 279,
+    "mc_dd95": 0.9785608910251928,
+    "cost_0_15": -0.9931492857859766
+  }
+]

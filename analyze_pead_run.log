@@ -1,0 +1,28 @@
+2026-07-03 10:12:05,748 [INFO] Rebuilt base sample: 131 trades (should match the original run's 131)
+2026-07-03 10:12:05,749 [INFO] 
+2026-07-03 10:12:05,750 [INFO] - Base sample: 131 observed OOS trade returns (mean=1.42%, std=9.88%, min=-22.0%, max=37.7%).
+2026-07-03 10:12:05,750 [INFO] - Method: resample AT the target size N with replacement FROM this same empirical return distribution (1000 resamples per N), track how the resulting MC 95th-pct drawdown moves. **Explicit assumption*
+2026-07-03 10:12:05,764 [INFO]     N=  131 trades -> MC_DD95= 80.1%
+2026-07-03 10:12:05,778 [INFO]     N=  150 trades -> MC_DD95= 82.1%
+2026-07-03 10:12:05,794 [INFO]     N=  200 trades -> MC_DD95= 84.4%
+2026-07-03 10:12:05,809 [INFO]     N=  250 trades -> MC_DD95= 86.6%
+2026-07-03 10:12:05,823 [INFO]     N=  300 trades -> MC_DD95= 88.0%
+2026-07-03 10:12:05,839 [INFO]     N=  400 trades -> MC_DD95= 89.0%
+2026-07-03 10:12:05,855 [INFO]     N=  500 trades -> MC_DD95= 91.3%
+2026-07-03 10:12:05,875 [INFO]     N=  700 trades -> MC_DD95= 92.5%
+2026-07-03 10:12:05,898 [INFO]     N= 1000 trades -> MC_DD95= 93.9%
+2026-07-03 10:12:05,927 [INFO]     N= 1500 trades -> MC_DD95= 95.0%
+2026-07-03 10:12:05,960 [INFO]     N= 2000 trades -> MC_DD95= 95.4%
+2026-07-03 10:12:06,005 [INFO]     N= 3000 trades -> MC_DD95= 95.9%
+2026-07-03 10:12:06,058 [INFO]     N= 4000 trades -> MC_DD95= 96.7%
+2026-07-03 10:12:06,120 [INFO]     N= 5000 trades -> MC_DD95= 97.1%
+2026-07-03 10:12:06,120 [INFO] 
+2026-07-03 10:12:06,120 [INFO] 
+2026-07-03 10:12:06,121 [INFO] 
+2026-07-03 10:12:06,121 [INFO] - Grid: threshold in [2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 10.0, 12.0] (9 values) x hold_days in [10, 15, 20, 30, 40, 50, 60, 80] (8 values) = 72 combos x 7 windows = 504 (param,window) evaluations. Sam
+2026-07-03 10:13:46,161 [INFO] - 504 total (param,window) combos evaluated. 420 rejected by the 30% anti-overfitting rule.
+2026-07-03 10:13:46,162 [INFO] - Param combos with a plateau across >=3/7 windows: 4
+2026-07-03 10:13:46,162 [INFO]     thresh=2.0% hold=80d: n_windows=4 mean_oos_sharpe=10.554 std=0.659 total_trades=114
+2026-07-03 10:13:46,162 [INFO]     thresh=4.0% hold=80d: n_windows=3 mean_oos_sharpe=9.223 std=1.221 total_trades=64
+2026-07-03 10:13:46,163 [INFO]     thresh=5.0% hold=80d: n_windows=3 mean_oos_sharpe=9.526 std=1.817 total_trades=55
+2026-07-03 10:13:46,163 [INFO]     thresh=8.0% hold=50d: n_windows=3 mean_oos_sharpe=4.514 std=1.832 total_trades=37

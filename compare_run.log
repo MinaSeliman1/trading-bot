@@ -1,0 +1,49 @@
+2026-07-02 03:59:54,192 [INFO] Fetching SPY 15Min bars for SPY ...
+2026-07-02 03:59:54,387 [INFO]   -> 29711 bars (2022-06-03 12:45:00+00:00 to 2026-07-01 19:45:00+00:00)
+2026-07-02 03:59:54,454 [INFO] Fetching QQQ 15Min bars for QQQ ...
+2026-07-02 03:59:54,554 [INFO]   -> 33134 bars (2022-06-03 12:30:00+00:00 to 2026-07-01 20:15:00+00:00)
+2026-07-02 03:59:54,626 [INFO] Fetching BTC/USD 1Hour bars for BTCUSD ...
+2026-07-02 03:59:54,736 [INFO]   -> 35755 bars (2022-06-03 08:00:00+00:00 to 2026-07-02 06:00:00+00:00)
+2026-07-02 03:59:54,823 [INFO] Fetching GLD 4Hour bars for GLD ...
+2026-07-02 03:59:54,895 [INFO]   -> 2439 bars (2022-06-03 12:00:00+00:00 to 2026-07-01 20:00:00+00:00)
+2026-07-02 03:59:54,960 [INFO] Fetching USO 4Hour bars for USO ...
+2026-07-02 03:59:55,027 [INFO]   -> 2428 bars (2022-06-03 12:00:00+00:00 to 2026-07-01 16:00:00+00:00)
+2026-07-02 03:59:55,091 [INFO] Building daily covariance schedule (Ledoit-Wolf shrinkage, 60-day lookback)...
+2026-07-02 03:59:58,711 [INFO] Covariance schedule: 990 daily snapshots
+2026-07-02 03:59:58,712 [INFO] Generated 12 walk-forward windows (2022-06-03 -> 2026-07-01)
+2026-07-02 03:59:58,712 [INFO] Window 1/12: train 2022-06-03->2023-06-03, test 2023-06-03->2023-09-03
+2026-07-02 04:00:05,587 [ERROR] KILL SWITCH: drawdown 10.03% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:00:07,512 [INFO] Window 2/12: train 2022-09-03->2023-09-03, test 2023-09-03->2023-12-03
+2026-07-02 04:00:15,968 [INFO] Window 3/12: train 2022-12-03->2023-12-03, test 2023-12-03->2024-03-03
+2026-07-02 04:00:22,556 [ERROR] KILL SWITCH: drawdown 10.03% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:00:23,742 [INFO] Window 4/12: train 2023-03-03->2024-03-03, test 2024-03-03->2024-06-03
+2026-07-02 04:00:30,201 [ERROR] KILL SWITCH: drawdown 10.03% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:00:31,492 [INFO] Window 5/12: train 2023-06-03->2024-06-03, test 2024-06-03->2024-09-03
+2026-07-02 04:00:37,688 [ERROR] KILL SWITCH: drawdown 10.05% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:00:39,102 [INFO] Window 6/12: train 2023-09-03->2024-09-03, test 2024-09-03->2024-12-03
+2026-07-02 04:00:45,633 [ERROR] KILL SWITCH: drawdown 10.03% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:00:46,742 [INFO] Window 7/12: train 2023-12-03->2024-12-03, test 2024-12-03->2025-03-03
+2026-07-02 04:00:53,176 [ERROR] KILL SWITCH: drawdown 10.07% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:00:54,328 [INFO] Window 8/12: train 2024-03-03->2025-03-03, test 2025-03-03->2025-06-03
+2026-07-02 04:01:00,541 [ERROR] KILL SWITCH: drawdown 10.09% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:01:01,787 [INFO] Window 9/12: train 2024-06-03->2025-06-03, test 2025-06-03->2025-09-03
+2026-07-02 04:01:08,687 [ERROR] KILL SWITCH: drawdown 10.31% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:01:09,947 [INFO] Window 10/12: train 2024-09-03->2025-09-03, test 2025-09-03->2025-12-03
+2026-07-02 04:01:16,771 [ERROR] KILL SWITCH: drawdown 10.36% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:01:18,291 [INFO] Window 11/12: train 2024-12-03->2025-12-03, test 2025-12-03->2026-03-03
+2026-07-02 04:01:24,735 [ERROR] KILL SWITCH: drawdown 10.11% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:01:26,075 [INFO] Window 12/12: train 2025-03-03->2026-03-03, test 2026-03-03->2026-06-03
+2026-07-02 04:01:32,515 [ERROR] KILL SWITCH: drawdown 10.19% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:01:33,889 [INFO] Running cost-sensitivity sweep across slippage scenarios...
+2026-07-02 04:01:57,840 [INFO] Cost scenario 0.05%: A total return -75.49%, B total return -17.56%
+2026-07-02 04:02:22,450 [INFO] Cost scenario 0.10%: A total return -96.33%, B total return -40.42%
+2026-07-02 04:02:26,417 [ERROR] KILL SWITCH: drawdown 10.03% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:02:36,319 [ERROR] KILL SWITCH: drawdown 10.07% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:02:44,338 [ERROR] KILL SWITCH: drawdown 10.16% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:02:46,321 [ERROR] KILL SWITCH: drawdown 10.12% exceeds 10% -- halting all new trading. Manual review required to resume.
+2026-07-02 04:02:46,348 [INFO] Cost scenario 0.15%: A total return -99.53%, B total return -57.45%
+2026-07-02 04:02:46,349 [INFO] Running Monte Carlo bootstrap (1000 resamples) for both strategies...
+2026-07-02 04:02:46,471 [INFO] Running paired block-bootstrap significance test...
+2026-07-02 04:02:46,752 [INFO] Classifying regime periods and attributing performance...
+2026-07-02 04:02:47,528 [INFO] Saved comparison_equity_curves.png
+2026-07-02 04:02:47,528 [INFO] Saved comparison_report.md

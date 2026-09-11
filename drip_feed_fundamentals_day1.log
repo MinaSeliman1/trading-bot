@@ -1,0 +1,16 @@
+2026-07-18 23:31:44,116 [INFO] Fundamentals drip-feed target: 97 tickers (reusing the existing PEAD earnings universe)
+2026-07-18 23:31:59,420 [INFO] JPM: 81 quarters fetched (1 symbols fetched so far today)
+2026-07-18 23:32:29,658 [INFO] ABBV: 62 quarters fetched (2 symbols fetched so far today)
+2026-07-18 23:32:59,907 [INFO] AME: 81 quarters fetched (3 symbols fetched so far today)
+2026-07-18 23:33:30,113 [INFO] AMGN: 81 quarters fetched (4 symbols fetched so far today)
+2026-07-18 23:34:00,459 [INFO] AON: 81 quarters fetched (5 symbols fetched so far today)
+2026-07-18 23:34:30,737 [INFO] AXON: 81 quarters fetched (6 symbols fetched so far today)
+2026-07-18 23:35:01,082 [INFO] AXP: 81 quarters fetched (7 symbols fetched so far today)
+2026-07-18 23:35:31,360 [INFO] BAC: 81 quarters fetched (8 symbols fetched so far today)
+2026-07-18 23:36:01,615 [INFO] BAX: 81 quarters fetched (9 symbols fetched so far today)
+2026-07-18 23:36:32,388 [INFO] BBWI: 81 quarters fetched (10 symbols fetched so far today)
+2026-07-18 23:37:02,656 [INFO] CAT: 81 quarters fetched (11 symbols fetched so far today)
+2026-07-18 23:37:17,722 [ERROR] Alpha Vantage rate limit hit for CCL/balance_sheet: We have detected your API key as <REDACTED-SEE-ENV> and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2026-07-18 23:37:17,722 [WARNING] Daily quota exhausted, stopping for today (reached CCL)
+2026-07-18 23:37:17,723 [INFO] Summary: 11 fetched today, 0 already cached, 0 confirmed no-data, 86 remaining for future days
+2026-07-18 23:37:17,723 [INFO] At ~11/day (today's observed rate): ~8 more day(s) needed

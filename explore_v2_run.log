@@ -1,0 +1,34 @@
+2026-07-02 10:22:53,392 [INFO] 
+2026-07-02 10:25:31,392 [INFO] mid-cap equity universe: 20/20 tickers usable
+2026-07-02 10:35:42,971 [INFO] crypto alt universe: 10/10 tickers usable
+2026-07-02 10:38:57,581 [INFO] - Tested 20 mid-cap equities with mean_reversion_trendfilter. 16 produced a surviving plateau. Top 5 by OOS Sharpe:
+2026-07-02 10:39:04,133 [INFO]     APA: Sharpe=-1.166 PF=0.731 MaxDD=78.5% MC_DD95=91.5% trades=457 cost0.15%=-92.0%
+2026-07-02 10:39:11,341 [INFO]     KSS: Sharpe=-1.184 PF=0.703 MaxDD=88.8% MC_DD95=95.7% trades=439 cost0.15%=-92.0%
+2026-07-02 10:39:17,824 [INFO]     ANF: Sharpe=-1.292 PF=0.731 MaxDD=97.5% MC_DD95=99.5% trades=772 cost0.15%=-99.3%
+2026-07-02 10:39:24,436 [INFO]     ALK: Sharpe=-1.320 PF=0.739 MaxDD=89.8% MC_DD95=96.0% trades=456 cost0.15%=-96.7%
+2026-07-02 10:39:31,098 [INFO]     URBN: Sharpe=-1.608 PF=0.664 MaxDD=90.9% MC_DD95=95.5% trades=448 cost0.15%=-96.6%
+2026-07-02 10:42:25,801 [INFO] - Tested 10 crypto alt-coins with momentum_breakout. Top 5 by OOS Sharpe:
+2026-07-02 10:42:34,807 [INFO]     AVAX/USD: Sharpe=0.378 PF=1.124 MaxDD=42.7% MC_DD95=68.4% trades=480 cost0.15%=-15.4%
+2026-07-02 10:42:43,807 [INFO]     ETH/USD: Sharpe=0.085 PF=0.987 MaxDD=58.7% MC_DD95=84.1% trades=563 cost0.15%=-59.1%
+2026-07-02 10:42:52,760 [INFO]     LINK/USD: Sharpe=-0.442 PF=0.848 MaxDD=58.3% MC_DD95=85.6% trades=445 cost0.15%=-71.9%
+2026-07-02 10:43:01,657 [INFO]     AAVE/USD: Sharpe=-0.700 PF=0.809 MaxDD=79.5% MC_DD95=90.3% trades=498 cost0.15%=-77.8%
+2026-07-02 10:43:07,082 [INFO]     CRV/USD: Sharpe=-0.866 PF=0.760 MaxDD=57.4% MC_DD95=78.4% trades=240 cost0.15%=-56.7%
+2026-07-02 10:43:07,082 [INFO] 
+2026-07-02 10:43:12,909 [INFO] broad daily universe: 56/56 tickers usable
+2026-07-02 10:43:31,206 [INFO] - Tested 56 liquid equities on DAILY bars with mean_reversion_trendfilter. 34 produced a surviving plateau. Top 5 by OOS Sharpe:
+2026-07-02 10:43:31,413 [INFO]     META: Sharpe=1.200 PF=inf MaxDD=2.3% MC_DD95=0.0% trades=8 cost0.15%=14.1%
+2026-07-02 10:43:31,628 [INFO]     NVDA: Sharpe=0.975 PF=2.338 MaxDD=4.0% MC_DD95=8.7% trades=31 cost0.15%=19.4%
+2026-07-02 10:43:31,837 [INFO]     COP: Sharpe=0.931 PF=2.406 MaxDD=4.8% MC_DD95=7.2% trades=23 cost0.15%=16.2%
+2026-07-02 10:43:32,029 [INFO]     NKE: Sharpe=0.661 PF=1.689 MaxDD=4.9% MC_DD95=11.8% trades=30 cost0.15%=11.6%
+2026-07-02 10:43:32,227 [INFO]     GE: Sharpe=0.625 PF=1.909 MaxDD=6.5% MC_DD95=10.6% trades=19 cost0.15%=10.1%
+2026-07-02 10:43:32,227 [INFO] 
+2026-07-02 10:43:32,428 [INFO] - Price matrix: 56 tickers x 1021 days
+2026-07-02 10:43:33,931 [INFO] - 36 (lookback,window) combos tested, 35 rejected by the 30% IS/OOS deviation rule. 0 lookback values survived as a plateau.
+2026-07-02 10:43:33,932 [INFO]   No lookback value survived the anti-overfitting filter as a stable plateau.
+2026-07-02 10:43:33,932 [INFO] 
+2026-07-02 10:43:44,126 [INFO] - **SPY / mean_reversion + trendfilter + SPY macro gate**: 36 combos, 18 rejected. 3 param sets survived.
+2026-07-02 10:43:51,115 [INFO]   best params={'sma_period': 20, 'std_dev_mult': 2.0, 'trend_sma_period': 200}: Sharpe=-4.152 PF=0.240 MaxDD=99.9% MC_DD95=99.9% trades=476 cost0.15%=-100.0%
+2026-07-02 10:44:01,610 [INFO] - **QQQ / mean_reversion + trendfilter + SPY macro gate**: 36 combos, 23 rejected. 3 param sets survived.
+2026-07-02 10:44:10,119 [INFO]   best params={'sma_period': 20, 'std_dev_mult': 2.4, 'trend_sma_period': 200}: Sharpe=-2.876 PF=0.342 MaxDD=96.3% MC_DD95=97.9% trades=279 cost0.15%=-99.3%
+2026-07-02 10:44:10,121 [INFO] 
+2026-07-02 10:44:10,121 [INFO] DONE. 17 candidates.

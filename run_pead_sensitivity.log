@@ -1,0 +1,144 @@
+2026-07-14 08:14:21,425 [INFO] 
+2026-07-14 08:14:21,425 [INFO] - Sweeping train_months in [12, 18, 24, 30, 36] (test_months=6 fixed throughout -- unchanged since the very first PEAD run). Not chosen post-hoc to improve any number -- a symmetric bracket around the
+2026-07-14 08:14:21,426 [INFO] - Also confirmed: BK and DFS (the 2 no-data symbols) never produced a cache file and are therefore ALREADY excluded from every run by construction -- there is no data to 'include', so this dimension i
+2026-07-14 08:14:28,611 [INFO] 
+2026-07-14 08:14:28,611 [INFO] - Tickers: ['ABBV', 'AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAC', 'BAX', 'BBWI', 'CAT', 'CCL', 'CDW', 'CLX', 'CMI', 'COST', 'CPRT', 'CTAS', 'CTSH', 'CVX', 'DGX', 'DHI', 'DIS', 'DPZ', 'DUK', 'ELV', 'EMR'
+2026-07-14 08:14:28,611 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:14:34,077 [INFO] - Window 0: params thresh=3.0% hold=20d, IS Sharpe=0.221, OOS Sharpe=0.088, OOS trades=55, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:14:39,544 [INFO] - Window 1: params thresh=10.0% hold=60d, IS Sharpe=0.323, OOS Sharpe=-0.537, OOS trades=31, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:14:44,983 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=0.402, OOS Sharpe=1.726, OOS trades=33, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:14:50,385 [INFO] - Window 3: params thresh=5.0% hold=40d, IS Sharpe=1.088, OOS Sharpe=0.752, OOS trades=45, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:14:55,841 [INFO] - Window 4: params thresh=10.0% hold=60d, IS Sharpe=1.870, OOS Sharpe=0.484, OOS trades=29, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:15:01,443 [INFO] - Window 5: params thresh=10.0% hold=20d, IS Sharpe=1.477, OOS Sharpe=1.383, OOS trades=39, OK
+2026-07-14 08:15:06,764 [INFO] - Window 6: params thresh=10.0% hold=20d, IS Sharpe=1.474, OOS Sharpe=1.291, OOS trades=32, OK
+2026-07-14 08:15:07,079 [INFO] 
+2026-07-14 08:15:07,079 [INFO] - Sharpe=0.641  Sortino=0.688  MaxDD=32.1%  MC_DD95=21.8%  PF=1.568  WinRate=58.7%  Trades=264  (5/7 windows flagged)
+2026-07-14 08:15:13,191 [INFO] - Cost sensitivity: 0.05%->62.5%, 0.10%->59.8%, 0.15%->57.1%
+2026-07-14 08:15:13,192 [INFO] 
+2026-07-14 08:15:13,192 [INFO] 
+2026-07-14 08:15:18,900 [INFO] 
+2026-07-14 08:15:18,900 [INFO] - Tickers: ['AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAX', 'BBWI', 'CCL', 'CDW', 'CLX', 'CMI', 'CPRT', 'CTAS', 'CTSH', 'DGX', 'DHI', 'DPZ', 'ELV', 'EMR', 'EOG', 'EQT', 'ETN', 'FDS', 'FIS', 'GILD', 'GL', 
+2026-07-14 08:15:18,901 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:15:23,231 [INFO] - Window 0: params thresh=3.0% hold=20d, IS Sharpe=0.200, OOS Sharpe=-0.151, OOS trades=52, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:15:27,610 [INFO] - Window 1: params thresh=10.0% hold=60d, IS Sharpe=0.323, OOS Sharpe=-0.363, OOS trades=31, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:15:31,844 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=0.808, OOS Sharpe=1.744, OOS trades=33, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:15:36,169 [INFO] - Window 3: params thresh=3.0% hold=40d, IS Sharpe=1.202, OOS Sharpe=0.230, OOS trades=45, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:15:40,553 [INFO] - Window 4: params thresh=10.0% hold=60d, IS Sharpe=1.737, OOS Sharpe=0.679, OOS trades=25, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:15:44,877 [INFO] - Window 5: params thresh=10.0% hold=20d, IS Sharpe=1.448, OOS Sharpe=1.648, OOS trades=35, OK
+2026-07-14 08:15:49,101 [INFO] - Window 6: params thresh=10.0% hold=20d, IS Sharpe=1.535, OOS Sharpe=0.957, OOS trades=23, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:15:49,387 [INFO] 
+2026-07-14 08:15:49,387 [INFO] - Sharpe=0.592  Sortino=0.630  MaxDD=29.3%  MC_DD95=23.9%  PF=1.500  WinRate=56.6%  Trades=244  (6/7 windows flagged)
+2026-07-14 08:15:53,855 [INFO] - Cost sensitivity: 0.05%->57.1%, 0.10%->54.6%, 0.15%->52.1%
+2026-07-14 08:15:53,856 [INFO] 
+2026-07-14 08:15:53,856 [INFO] 
+2026-07-14 08:16:04,554 [INFO] 
+2026-07-14 08:16:04,554 [INFO] - Tickers: ['ABBV', 'AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAC', 'BAX', 'BBWI', 'CAT', 'CCL', 'CDW', 'CLX', 'CMI', 'COST', 'CPRT', 'CTAS', 'CTSH', 'CVX', 'DGX', 'DHI', 'DIS', 'DPZ', 'DUK', 'ELV', 'EMR'
+2026-07-14 08:16:04,554 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:16:10,218 [INFO] - Window 0: params thresh=3.0% hold=20d, IS Sharpe=0.210, OOS Sharpe=-0.511, OOS trades=60, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:16:16,627 [INFO] - Window 1: params thresh=5.0% hold=60d, IS Sharpe=0.370, OOS Sharpe=1.093, OOS trades=34, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:16:22,805 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=1.023, OOS Sharpe=0.358, OOS trades=35, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:16:29,207 [INFO] - Window 3: params thresh=5.0% hold=60d, IS Sharpe=1.197, OOS Sharpe=0.085, OOS trades=36, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:16:35,385 [INFO] - Window 4: params thresh=10.0% hold=20d, IS Sharpe=1.584, OOS Sharpe=1.383, OOS trades=39, OK
+2026-07-14 08:16:41,677 [INFO] - Window 5: params thresh=10.0% hold=20d, IS Sharpe=1.473, OOS Sharpe=1.291, OOS trades=32, OK
+2026-07-14 08:16:41,965 [INFO] 
+2026-07-14 08:16:41,966 [INFO] - Sharpe=0.583  Sortino=0.662  MaxDD=23.2%  MC_DD95=19.6%  PF=1.461  WinRate=55.5%  Trades=236  (4/6 windows flagged)
+2026-07-14 08:16:46,992 [INFO] - Cost sensitivity: 0.05%->43.1%, 0.10%->40.7%, 0.15%->38.3%
+2026-07-14 08:16:46,993 [INFO] 
+2026-07-14 08:16:46,993 [INFO] 
+2026-07-14 08:16:52,944 [INFO] 
+2026-07-14 08:16:52,944 [INFO] - Tickers: ['AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAX', 'BBWI', 'CCL', 'CDW', 'CLX', 'CMI', 'CPRT', 'CTAS', 'CTSH', 'DGX', 'DHI', 'DPZ', 'ELV', 'EMR', 'EOG', 'EQT', 'ETN', 'FDS', 'FIS', 'GILD', 'GL', 
+2026-07-14 08:16:52,944 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:16:57,688 [INFO] - Window 0: params thresh=10.0% hold=60d, IS Sharpe=0.206, OOS Sharpe=-0.363, OOS trades=31, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:17:02,885 [INFO] - Window 1: params thresh=7.0% hold=60d, IS Sharpe=0.344, OOS Sharpe=1.744, OOS trades=33, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:17:07,919 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=1.176, OOS Sharpe=0.226, OOS trades=34, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:17:13,115 [INFO] - Window 3: params thresh=7.0% hold=60d, IS Sharpe=1.166, OOS Sharpe=-0.030, OOS trades=29, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:17:18,086 [INFO] - Window 4: params thresh=10.0% hold=20d, IS Sharpe=1.573, OOS Sharpe=1.648, OOS trades=35, OK
+2026-07-14 08:17:23,117 [INFO] - Window 5: params thresh=10.0% hold=20d, IS Sharpe=1.526, OOS Sharpe=0.957, OOS trades=23, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:17:23,393 [INFO] 
+2026-07-14 08:17:23,394 [INFO] - Sharpe=0.672  Sortino=0.744  MaxDD=28.2%  MC_DD95=18.6%  PF=1.600  WinRate=58.9%  Trades=185  (5/6 windows flagged)
+2026-07-14 08:17:27,120 [INFO] - Cost sensitivity: 0.05%->50.8%, 0.10%->48.9%, 0.15%->47.0%
+2026-07-14 08:17:27,120 [INFO] 
+2026-07-14 08:17:27,121 [INFO] 
+2026-07-14 08:17:47,391 [INFO] 
+2026-07-14 08:17:47,391 [INFO] - Tickers: ['ABBV', 'AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAC', 'BAX', 'BBWI', 'CAT', 'CCL', 'CDW', 'CLX', 'CMI', 'COST', 'CPRT', 'CTAS', 'CTSH', 'CVX', 'DGX', 'DHI', 'DIS', 'DPZ', 'DUK', 'ELV', 'EMR'
+2026-07-14 08:17:47,391 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:17:53,528 [INFO] - Window 0: params thresh=5.0% hold=60d, IS Sharpe=0.240, OOS Sharpe=1.093, OOS trades=34, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:18:00,637 [INFO] - Window 1: params thresh=5.0% hold=60d, IS Sharpe=0.628, OOS Sharpe=0.511, OOS trades=35, OK
+2026-07-14 08:18:07,726 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=1.119, OOS Sharpe=0.416, OOS trades=35, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:18:15,513 [INFO] - Window 3: params thresh=10.0% hold=20d, IS Sharpe=0.960, OOS Sharpe=1.383, OOS trades=39, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:18:22,441 [INFO] - Window 4: params thresh=10.0% hold=20d, IS Sharpe=1.556, OOS Sharpe=1.291, OOS trades=32, OK
+2026-07-14 08:18:22,692 [INFO] 
+2026-07-14 08:18:22,692 [INFO] - Sharpe=0.884  Sortino=1.002  MaxDD=18.5%  MC_DD95=14.2%  PF=1.891  WinRate=62.3%  Trades=175  (3/5 windows flagged)
+2026-07-14 08:18:26,756 [INFO] - Cost sensitivity: 0.05%->56.4%, 0.10%->54.6%, 0.15%->52.8%
+2026-07-14 08:18:26,757 [INFO] 
+2026-07-14 08:18:26,757 [INFO] 
+2026-07-14 08:18:32,811 [INFO] 
+2026-07-14 08:18:32,812 [INFO] - Tickers: ['AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAX', 'BBWI', 'CCL', 'CDW', 'CLX', 'CMI', 'CPRT', 'CTAS', 'CTSH', 'DGX', 'DHI', 'DPZ', 'ELV', 'EMR', 'EOG', 'EQT', 'ETN', 'FDS', 'FIS', 'GILD', 'GL', 
+2026-07-14 08:18:32,812 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:18:38,338 [INFO] - Window 0: params thresh=5.0% hold=60d, IS Sharpe=0.284, OOS Sharpe=1.278, OOS trades=33, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:18:44,142 [INFO] - Window 1: params thresh=3.0% hold=60d, IS Sharpe=0.673, OOS Sharpe=0.164, OOS trades=36, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:18:50,006 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=1.176, OOS Sharpe=-0.030, OOS trades=29, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:18:55,730 [INFO] - Window 3: params thresh=10.0% hold=60d, IS Sharpe=1.080, OOS Sharpe=1.096, OOS trades=26, OK
+2026-07-14 08:19:01,476 [INFO] - Window 4: params thresh=10.0% hold=20d, IS Sharpe=1.601, OOS Sharpe=0.957, OOS trades=23, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:19:01,696 [INFO] 
+2026-07-14 08:19:01,697 [INFO] - Sharpe=0.718  Sortino=0.808  MaxDD=28.7%  MC_DD95=16.3%  PF=1.782  WinRate=60.5%  Trades=147  (4/5 windows flagged)
+2026-07-14 08:19:04,834 [INFO] - Cost sensitivity: 0.05%->49.5%, 0.10%->48.0%, 0.15%->46.5%
+2026-07-14 08:19:04,834 [INFO] 
+2026-07-14 08:19:04,834 [INFO] 
+2026-07-14 08:19:27,618 [INFO] 
+2026-07-14 08:19:27,619 [INFO] - Tickers: ['ABBV', 'AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAC', 'BAX', 'BBWI', 'CAT', 'CCL', 'CDW', 'CLX', 'CMI', 'COST', 'CPRT', 'CTAS', 'CTSH', 'CVX', 'DGX', 'DHI', 'DIS', 'DPZ', 'DUK', 'ELV', 'EMR'
+2026-07-14 08:19:27,619 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:19:34,499 [INFO] - Window 0: params thresh=5.0% hold=60d, IS Sharpe=0.521, OOS Sharpe=0.511, OOS trades=35, OK
+2026-07-14 08:19:42,586 [INFO] - Window 1: params thresh=5.0% hold=60d, IS Sharpe=0.732, OOS Sharpe=0.085, OOS trades=36, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:19:50,420 [INFO] - Window 2: params thresh=10.0% hold=60d, IS Sharpe=0.884, OOS Sharpe=0.758, OOS trades=30, OK
+2026-07-14 08:19:58,348 [INFO] - Window 3: params thresh=7.0% hold=60d, IS Sharpe=1.073, OOS Sharpe=1.215, OOS trades=35, OK
+2026-07-14 08:19:58,601 [INFO] 
+2026-07-14 08:19:58,601 [INFO] - Sharpe=0.653  Sortino=0.688  MaxDD=37.9%  MC_DD95=16.6%  PF=1.775  WinRate=58.8%  Trades=136  (1/4 windows flagged)
+2026-07-14 08:20:01,968 [INFO] - Cost sensitivity: 0.05%->48.3%, 0.10%->46.9%, 0.15%->45.5%
+2026-07-14 08:20:01,969 [INFO] 
+2026-07-14 08:20:01,970 [INFO] 
+2026-07-14 08:20:14,318 [INFO] 
+2026-07-14 08:20:14,318 [INFO] - Tickers: ['AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAX', 'BBWI', 'CCL', 'CDW', 'CLX', 'CMI', 'CPRT', 'CTAS', 'CTSH', 'DGX', 'DHI', 'DPZ', 'ELV', 'EMR', 'EOG', 'EQT', 'ETN', 'FDS', 'FIS', 'GILD', 'GL', 
+2026-07-14 08:20:14,318 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:20:20,551 [INFO] - Window 0: params thresh=5.0% hold=60d, IS Sharpe=0.515, OOS Sharpe=0.595, OOS trades=34, OK
+2026-07-14 08:20:27,203 [INFO] - Window 1: params thresh=3.0% hold=60d, IS Sharpe=0.749, OOS Sharpe=0.035, OOS trades=35, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:20:33,589 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=1.008, OOS Sharpe=0.926, OOS trades=33, OK
+2026-07-14 08:20:40,191 [INFO] - Window 3: params thresh=10.0% hold=20d, IS Sharpe=1.097, OOS Sharpe=0.957, OOS trades=23, OK
+2026-07-14 08:20:40,384 [INFO] 
+2026-07-14 08:20:40,384 [INFO] - Sharpe=0.613  Sortino=0.620  MaxDD=39.2%  MC_DD95=17.5%  PF=1.731  WinRate=60.0%  Trades=125  (1/4 windows flagged)
+2026-07-14 08:20:43,019 [INFO] - Cost sensitivity: 0.05%->40.9%, 0.10%->39.6%, 0.15%->38.3%
+2026-07-14 08:20:43,020 [INFO] 
+2026-07-14 08:20:43,021 [INFO] 
+2026-07-14 08:21:11,830 [INFO] 
+2026-07-14 08:21:11,830 [INFO] - Tickers: ['ABBV', 'AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAC', 'BAX', 'BBWI', 'CAT', 'CCL', 'CDW', 'CLX', 'CMI', 'COST', 'CPRT', 'CTAS', 'CTSH', 'CVX', 'DGX', 'DHI', 'DIS', 'DPZ', 'DUK', 'ELV', 'EMR'
+2026-07-14 08:21:11,831 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:21:19,473 [INFO] - Window 0: params thresh=5.0% hold=60d, IS Sharpe=0.602, OOS Sharpe=0.085, OOS trades=36, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:21:28,172 [INFO] - Window 1: params thresh=10.0% hold=60d, IS Sharpe=0.592, OOS Sharpe=0.758, OOS trades=30, OK
+2026-07-14 08:21:36,754 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=1.112, OOS Sharpe=1.215, OOS trades=35, OK
+2026-07-14 08:21:36,955 [INFO] 
+2026-07-14 08:21:36,956 [INFO] - Sharpe=0.656  Sortino=0.674  MaxDD=39.7%  MC_DD95=16.0%  PF=1.857  WinRate=56.4%  Trades=101  (1/3 windows flagged)
+2026-07-14 08:21:39,477 [INFO] - Cost sensitivity: 0.05%->41.9%, 0.10%->40.9%, 0.15%->39.8%
+2026-07-14 08:21:39,478 [INFO] 
+2026-07-14 08:21:39,478 [INFO] 
+2026-07-14 08:21:55,646 [INFO] 
+2026-07-14 08:21:55,646 [INFO] - Tickers: ['AME', 'AMGN', 'AON', 'AXON', 'AXP', 'BAX', 'BBWI', 'CCL', 'CDW', 'CLX', 'CMI', 'CPRT', 'CTAS', 'CTSH', 'DGX', 'DHI', 'DPZ', 'ELV', 'EMR', 'EOG', 'EQT', 'ETN', 'FDS', 'FIS', 'GILD', 'GL', 
+2026-07-14 08:21:55,647 [INFO] - Same methodology throughout: exposure cap 1.5x, max 3 new positions/day, priority by surprise magnitude, NO regime filter (see 'DECISION: regime-filter path rejected' section -- not being carried fo
+2026-07-14 08:22:01,986 [INFO] - Window 0: params thresh=5.0% hold=60d, IS Sharpe=0.597, OOS Sharpe=-0.328, OOS trades=33, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:22:09,174 [INFO] - Window 1: params thresh=10.0% hold=60d, IS Sharpe=0.636, OOS Sharpe=1.096, OOS trades=26, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:22:16,195 [INFO] - Window 2: params thresh=7.0% hold=60d, IS Sharpe=1.104, OOS Sharpe=1.451, OOS trades=29, FLAG (>30% IS/OOS deviation)
+2026-07-14 08:22:16,357 [INFO] 
+2026-07-14 08:22:16,357 [INFO] - Sharpe=0.669  Sortino=0.748  MaxDD=41.2%  MC_DD95=16.8%  PF=1.879  WinRate=55.7%  Trades=88  (3/3 windows flagged)
+2026-07-14 08:22:18,277 [INFO] - Cost sensitivity: 0.05%->41.1%, 0.10%->40.2%, 0.15%->39.3%
+2026-07-14 08:22:18,278 [INFO] 
+2026-07-14 08:22:18,278 [INFO] 
+2026-07-14 08:22:18,283 [INFO] 
+2026-07-14 08:22:18,283 [INFO] | train_months | Full-97 Sharpe | Full-97 MC_DD95 | Full-97 windows flagged | New-74 Sharpe | New-74 MC_DD95 | New-74 windows flagged |
+2026-07-14 08:22:18,283 [INFO] |---|---|---|---|---|---|---|
+2026-07-14 08:22:18,284 [INFO] | 12 | 0.641 | 21.8% | 5/7 | 0.592 | 23.9% | 6/7 |
+2026-07-14 08:22:18,284 [INFO] | 18 | 0.583 | 19.6% | 4/6 | 0.672 | 18.6% | 5/6 |
+2026-07-14 08:22:18,284 [INFO] | 24 | 0.884 | 14.2% | 3/5 | 0.718 | 16.3% | 4/5 |
+2026-07-14 08:22:18,285 [INFO] | 30 | 0.653 | 16.6% | 1/4 | 0.613 | 17.5% | 1/4 |
+2026-07-14 08:22:18,285 [INFO] | 36 | 0.656 | 16.0% | 1/3 | 0.669 | 16.8% | 3/3 |
+2026-07-14 08:22:18,285 [INFO] 
+2026-07-14 08:22:18,285 [INFO] - New-only-74 Sharpe range across train-window widths: 0.592 to 0.718 (4/5 pass)
+2026-07-14 08:22:18,286 [INFO] 

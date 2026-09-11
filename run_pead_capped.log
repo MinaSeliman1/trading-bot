@@ -1,0 +1,13 @@
+2026-07-03 10:21:56,322 [INFO] 
+2026-07-03 10:21:56,322 [INFO] - Identical setup to the original run: same 23 tickers, same grid [3.0, 5.0, 7.0, 10.0] x [20, 40, 60], same 7 walk-forward windows (24mo train / 6mo test). Only change: trades now go through `build_p
+2026-07-03 10:21:57,972 [INFO] - Window 0: params thresh=10.0% hold=60d, IS Sharpe=8.172, OOS Sharpe=-4.297, OOS trades=9, FLAG (>30% IS/OOS deviation)
+2026-07-03 10:21:59,470 [INFO] - Window 1: params thresh=7.0% hold=20d, IS Sharpe=4.472, OOS Sharpe=-8.842, OOS trades=16, FLAG (>30% IS/OOS deviation)
+2026-07-03 10:22:00,997 [INFO] - Window 2: params thresh=3.0% hold=20d, IS Sharpe=0.273, OOS Sharpe=5.633, OOS trades=21, FLAG (>30% IS/OOS deviation)
+2026-07-03 10:22:02,487 [INFO] - Window 3: params thresh=3.0% hold=20d, IS Sharpe=0.662, OOS Sharpe=5.271, OOS trades=24, FLAG (>30% IS/OOS deviation)
+2026-07-03 10:22:04,128 [INFO] - Window 4: params thresh=3.0% hold=60d, IS Sharpe=5.572, OOS Sharpe=1.378, OOS trades=20, FLAG (>30% IS/OOS deviation)
+2026-07-03 10:22:05,830 [INFO] - Window 5: params thresh=7.0% hold=60d, IS Sharpe=5.108, OOS Sharpe=6.650, OOS trades=16, FLAG (>30% IS/OOS deviation)
+2026-07-03 10:22:07,561 [INFO] - Window 6: params thresh=7.0% hold=40d, IS Sharpe=7.347, OOS Sharpe=5.893, OOS trades=14, OK
+2026-07-03 10:22:07,682 [INFO] 
+2026-07-03 10:22:07,682 [INFO] - Sharpe=2.409  Sortino=3.234  MaxDD=9.2%  **MC_DD95=13.0%**  PF=1.435  WinRate=55.0%  Trades=120  (6/7 windows flagged)
+2026-07-03 10:22:07,683 [INFO] 
+2026-07-03 10:22:07,683 [INFO] 

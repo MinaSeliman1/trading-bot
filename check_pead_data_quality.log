@@ -1,0 +1,34 @@
+2026-07-05 01:06:04,657 [INFO] 
+2026-07-05 01:06:09,901 [INFO] - Earnings data: 20/45 tickers flagged:
+2026-07-05 01:06:09,902 [INFO]     AXON: 8/99 rows with NaN surprise_pct
+2026-07-05 01:06:09,902 [INFO]     AXON: 1 extreme surprise_pct values (>|500.0%|): [533.3]
+2026-07-05 01:06:09,902 [INFO]     AXON: 3 quarter gaps < 60d (possible duplicate/restated report): [54.0, 58.0, 57.0]
+2026-07-05 01:06:09,902 [INFO]     AXON: 1 quarter gaps > 200d (possible missed quarter): [204.0]
+2026-07-05 01:06:09,903 [INFO]     AXP: 1 extreme surprise_pct values (>|500.0%|): [583.3]
+2026-07-05 01:06:09,903 [INFO]     BAC: 2 extreme surprise_pct values (>|500.0%|): [-900.0, -613.3]
+2026-07-05 01:06:09,903 [INFO]     BAX: 1/121 rows with NaN surprise_pct
+2026-07-05 01:06:09,903 [INFO]     BAX: 1 quarter gaps < 60d (possible duplicate/restated report): [44.0]
+2026-07-05 01:06:09,903 [INFO]     BBWI: 7/109 rows with NaN surprise_pct
+2026-07-05 01:06:09,904 [INFO]     BBWI: 1 extreme surprise_pct values (>|500.0%|): [1030.0]
+2026-07-05 01:06:09,904 [INFO]     CAT: 2 extreme surprise_pct values (>|500.0%|): [1850.0, 1500.0]
+2026-07-05 01:06:09,905 [INFO]     CCL: 1/122 rows with NaN surprise_pct
+2026-07-05 01:06:09,905 [INFO]     CCL: 1 extreme surprise_pct values (>|500.0%|): [650.0]
+2026-07-05 01:06:09,906 [INFO]     CDW: 1/52 rows with NaN surprise_pct
+2026-07-05 01:06:09,906 [INFO]     COST: 1 duplicate report dates: [Timestamp('2007-05-31 00:00:00+0000', tz='UTC')]
+2026-07-05 01:06:09,907 [INFO]     COST: 13/102 rows with NaN surprise_pct
+2026-07-05 01:06:09,907 [INFO]     COST: 3 quarter gaps < 60d (possible duplicate/restated report): [26.0, 21.0, 0.0]
+2026-07-05 01:06:09,908 [INFO]     COST: 3 quarter gaps > 200d (possible missed quarter): [211.0, 217.0, 203.0]
+2026-07-05 01:06:09,908 [INFO]     CTSH: 4/112 rows with NaN surprise_pct
+2026-07-05 01:06:09,908 [INFO]     DHI: 2 extreme surprise_pct values (>|500.0%|): [-546.9, 1010.0]
+2026-07-05 01:06:09,909 [INFO]     DPZ: 1/88 rows with NaN surprise_pct
+2026-07-05 01:06:09,910 [INFO]     DPZ: 4 quarter gaps < 60d (possible duplicate/restated report): [49.0, 58.0, 58.0]
+2026-07-05 01:06:09,910 [INFO]     EOG: 3/121 rows with NaN surprise_pct
+2026-07-05 01:06:09,910 [INFO]     EQT: 2 extreme surprise_pct values (>|500.0%|): [7500.0, 800.0]
+2026-07-05 01:06:09,910 [INFO]     GS: 1 extreme surprise_pct values (>|500.0%|): [-740.0]
+2026-07-05 01:06:09,911 [INFO]     JPM: 1 extreme surprise_pct values (>|500.0%|): [-2900.0]
+2026-07-05 01:06:09,911 [INFO]     JPM: 1 quarter gaps < 60d (possible duplicate/restated report): [45.0]
+2026-07-05 01:06:09,911 [INFO]     KO: 1 quarter gaps < 60d (possible duplicate/restated report): [56.0]
+2026-07-05 01:06:09,912 [INFO]     LIN: 1 quarter gaps < 60d (possible duplicate/restated report): [53.0]
+2026-07-05 01:06:09,912 [INFO]     WMT: 5 quarter gaps < 60d (possible duplicate/restated report): [48.0, 50.0, 48.0]
+2026-07-05 01:06:09,913 [INFO]     XOM: 1 extreme surprise_pct values (>|500.0%|): [960.0]
+2026-07-05 01:06:09,913 [INFO] - Price bars: no issues found across all 45 tickers (no non-positive OHLC, no impossible high/low, no large gaps, sufficient history).

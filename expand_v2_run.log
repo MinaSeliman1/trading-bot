@@ -1,0 +1,35 @@
+2026-07-03 02:07:32,299 [INFO] 
+2026-07-03 02:07:32,299 [INFO] - Universe: all 278 tickers in `bot/sp500_pool.py` minus the 112 already tested (56 original + 56 independent-validation draw) = 222 new tickers. Same exact grid ({sma_period:20, std_dev_mult in [1.5,
+2026-07-03 02:07:45,081 [INFO] expansion universe: 222/222 tickers usable
+2026-07-03 02:09:19,128 [INFO] - Fetched 222/222 tickers. 130 produced a surviving plateau. **29 of 222 new tickers passed all 3 criteria.**
+2026-07-03 02:09:19,129 [INFO]     PASS: C Sharpe=1.513 PF=4.872 MaxDD=1.5% trades=14
+2026-07-03 02:09:19,129 [INFO]     PASS: KLAC Sharpe=1.276 PF=3.639 MaxDD=3.6% trades=21
+2026-07-03 02:09:19,129 [INFO]     PASS: JCI Sharpe=1.247 PF=6.316 MaxDD=3.6% trades=17
+2026-07-03 02:09:19,129 [INFO]     PASS: HOLX Sharpe=1.175 PF=3.994 MaxDD=3.7% trades=22
+2026-07-03 02:09:19,130 [INFO]     PASS: HWM Sharpe=1.012 PF=5.678 MaxDD=2.5% trades=11
+2026-07-03 02:09:19,130 [INFO]     PASS: WMB Sharpe=0.992 PF=2.827 MaxDD=4.1% trades=19
+2026-07-03 02:09:19,130 [INFO]     PASS: PGR Sharpe=0.910 PF=2.559 MaxDD=3.6% trades=21
+2026-07-03 02:09:19,131 [INFO]     PASS: NOW Sharpe=0.907 PF=2.655 MaxDD=6.1% trades=28
+2026-07-03 02:09:19,131 [INFO]     PASS: GD Sharpe=0.890 PF=2.585 MaxDD=4.0% trades=23
+2026-07-03 02:09:19,131 [INFO]     PASS: WBA Sharpe=0.888 PF=2.216 MaxDD=5.7% trades=16
+2026-07-03 02:09:19,131 [INFO]     PASS: RMD Sharpe=0.887 PF=3.898 MaxDD=2.4% trades=13
+2026-07-03 02:09:19,132 [INFO]     PASS: LLY Sharpe=0.872 PF=2.229 MaxDD=4.5% trades=25
+2026-07-03 02:09:19,132 [INFO]     PASS: DVA Sharpe=0.823 PF=2.323 MaxDD=5.3% trades=15
+2026-07-03 02:09:19,132 [INFO]     PASS: TRV Sharpe=0.805 PF=2.221 MaxDD=3.8% trades=17
+2026-07-03 02:09:19,132 [INFO]     PASS: MPWR Sharpe=0.801 PF=1.986 MaxDD=6.1% trades=27
+2026-07-03 02:09:19,133 [INFO]     PASS: ROP Sharpe=0.793 PF=3.567 MaxDD=2.7% trades=8
+2026-07-03 02:09:19,133 [INFO]     PASS: ORLY Sharpe=0.780 PF=2.058 MaxDD=7.9% trades=27
+2026-07-03 02:09:19,133 [INFO]     PASS: STT Sharpe=0.719 PF=1.751 MaxDD=9.0% trades=28
+2026-07-03 02:09:19,134 [INFO]     PASS: ON Sharpe=0.718 PF=2.437 MaxDD=5.2% trades=16
+2026-07-03 02:09:19,134 [INFO]     PASS: INTU Sharpe=0.692 PF=3.340 MaxDD=3.8% trades=9
+2026-07-03 02:09:19,134 [INFO]     PASS: PHM Sharpe=0.679 PF=2.890 MaxDD=2.4% trades=13
+2026-07-03 02:09:19,134 [INFO]     PASS: K Sharpe=0.645 PF=2.152 MaxDD=3.4% trades=12
+2026-07-03 02:09:19,135 [INFO]     PASS: AMAT Sharpe=0.619 PF=1.974 MaxDD=6.1% trades=14
+2026-07-03 02:09:19,135 [INFO]     PASS: CB Sharpe=0.611 PF=2.255 MaxDD=4.7% trades=11
+2026-07-03 02:09:19,135 [INFO]     PASS: GILD Sharpe=0.576 PF=1.832 MaxDD=3.5% trades=18
+2026-07-03 02:09:19,136 [INFO]     PASS: PSX Sharpe=0.558 PF=2.072 MaxDD=4.3% trades=13
+2026-07-03 02:09:19,136 [INFO]     PASS: LRCX Sharpe=0.553 PF=2.983 MaxDD=7.4% trades=24
+2026-07-03 02:09:19,136 [INFO]     PASS: ODFL Sharpe=0.552 PF=1.583 MaxDD=7.3% trades=26
+2026-07-03 02:09:19,137 [INFO]     PASS: AFL Sharpe=0.509 PF=1.977 MaxDD=3.7% trades=11
+2026-07-03 02:09:19,137 [INFO] 
+2026-07-03 02:09:20,925 [INFO] - **Combined portfolio of this batch's 29 new passers alone: Sharpe=3.184** MaxDD=0.4% MC_DD95=15.1% PF=2.532 trades=519

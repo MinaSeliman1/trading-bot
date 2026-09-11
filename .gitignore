@@ -1,0 +1,11 @@
+.env
+*.csv
+bot.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Disposable, reconstructable-on-demand minute-bar cache for the
+# already-rejected ORB-fade strategy (bot_intraday_15min/) -- 444MB,
+# disproportionate for what it is; excluded to keep the repo lean.
+data_cache_intraday/

@@ -1,0 +1,33 @@
+2026-07-06 20:17:26,523 [INFO] Fresh drip-feed target universe: 75 tickers (seed=20260703, pool=277 after excluding 24 already tested)
+2026-07-06 20:17:26,672 [ERROR] Alpha Vantage returned no usable data for BK: response missing/empty quarterlyEarnings
+2026-07-06 20:17:26,674 [WARNING] BK: no usable data (not a quota issue) -- skipping this symbol, continuing batch
+2026-07-06 20:17:41,760 [ERROR] Alpha Vantage returned no usable data for DFS: response missing/empty quarterlyEarnings
+2026-07-06 20:17:41,762 [WARNING] DFS: no usable data (not a quota issue) -- skipping this symbol, continuing batch
+2026-07-06 20:17:56,900 [INFO] FDS: 119 quarters fetched (1 fetched so far today)
+2026-07-06 20:18:12,159 [INFO] FIS: 100 quarters fetched (2 fetched so far today)
+2026-07-06 20:18:27,288 [INFO] GILD: 121 quarters fetched (3 fetched so far today)
+2026-07-06 20:18:42,383 [INFO] GL: 121 quarters fetched (4 fetched so far today)
+2026-07-06 20:18:57,490 [INFO] GRMN: 102 quarters fetched (5 fetched so far today)
+2026-07-06 20:19:12,634 [INFO] HBAN: 121 quarters fetched (6 fetched so far today)
+2026-07-06 20:19:27,730 [INFO] HCA: 61 quarters fetched (7 fetched so far today)
+2026-07-06 20:19:42,862 [INFO] HSIC: 121 quarters fetched (8 fetched so far today)
+2026-07-06 20:19:57,982 [INFO] HUM: 121 quarters fetched (9 fetched so far today)
+2026-07-06 20:20:13,150 [INFO] INCY: 121 quarters fetched (10 fetched so far today)
+2026-07-06 20:20:28,282 [INFO] INTU: 122 quarters fetched (11 fetched so far today)
+2026-07-06 20:20:43,400 [INFO] IVZ: 101 quarters fetched (12 fetched so far today)
+2026-07-06 20:20:58,531 [INFO] J: 121 quarters fetched (13 fetched so far today)
+2026-07-06 20:21:13,640 [INFO] KLAC: 121 quarters fetched (14 fetched so far today)
+2026-07-06 20:21:28,738 [INFO] KR: 113 quarters fetched (15 fetched so far today)
+2026-07-06 20:21:43,848 [INFO] L: 121 quarters fetched (16 fetched so far today)
+2026-07-06 20:21:58,973 [INFO] LH: 121 quarters fetched (17 fetched so far today)
+2026-07-06 20:22:14,066 [INFO] LRCX: 121 quarters fetched (18 fetched so far today)
+2026-07-06 20:22:29,230 [INFO] MCHP: 121 quarters fetched (19 fetched so far today)
+2026-07-06 20:22:44,366 [INFO] MHK: 121 quarters fetched (20 fetched so far today)
+2026-07-06 20:22:59,486 [INFO] MKC: 122 quarters fetched (21 fetched so far today)
+2026-07-06 20:23:14,671 [INFO] MKTX: 86 quarters fetched (22 fetched so far today)
+2026-07-06 20:23:29,733 [INFO] MOH: 92 quarters fetched (23 fetched so far today)
+2026-07-06 20:23:44,822 [ERROR] Alpha Vantage rate limit hit for MPWR: We have detected your API key as <REDACTED-SEE-ENV> and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2026-07-06 20:23:44,822 [WARNING] Daily quota exhausted, stopping for today (reached MPWR)
+2026-07-06 20:23:44,823 [INFO] Summary: 23 fetched today, 21 already cached from before, 2 confirmed no-data symbols, 29 remaining for future days
+2026-07-06 20:23:44,823 [INFO] No-data symbols (won't be retried): ['BK', 'DFS']
+2026-07-06 20:23:44,823 [INFO] At ~23/day (today's observed rate): ~2 more day(s) needed

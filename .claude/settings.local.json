@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c 'import py_compile, glob *)",
+      "Bash(python -c \"import alpaca_trade_api\")",
+      "Bash(python -c \"import pandas\")",
+      "Bash(python -c \"import dotenv\")",
+      "Bash(python -m venv .venv)",
+      "Bash(./.venv/Scripts/python.exe -m pip install -q -r requirements.txt)",
+      "PowerShell(explorer.exe \"C:\\\\Users\\\\minas\\\\trading-bot\")"
+    ]
+  }
+}

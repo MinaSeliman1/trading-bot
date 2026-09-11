@@ -1,0 +1,10 @@
+2026-07-04 22:02:49,801 [INFO] Fresh drip-feed target universe: 75 tickers (seed=20260703, pool=277 after excluding 24 already tested)
+2026-07-04 22:02:49,987 [INFO] AME: 115 quarters fetched (1/25 new fetches today)
+2026-07-04 22:03:05,112 [INFO] AMGN: 121 quarters fetched (2/25 new fetches today)
+2026-07-04 22:03:20,231 [INFO] AON: 121 quarters fetched (3/25 new fetches today)
+2026-07-04 22:03:35,363 [INFO] AXON: 99 quarters fetched (4/25 new fetches today)
+2026-07-04 22:03:50,482 [INFO] BAX: 121 quarters fetched (5/25 new fetches today)
+2026-07-04 22:04:05,591 [INFO] BBWI: 109 quarters fetched (6/25 new fetches today)
+2026-07-04 22:04:20,844 [WARNING] BK: empty result -- likely daily quota exhausted, stopping for today
+2026-07-04 22:04:20,845 [INFO] Summary: 6 fetched today, 0 already cached from before, 69 remaining for future days
+2026-07-04 22:04:20,845 [INFO] At 25/day: ~3 more day(s) needed to complete this 75-ticker batch

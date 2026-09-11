@@ -1,0 +1,21 @@
+2026-07-03 12:01:20,728 [INFO] Regime labels: {'BULLISH': 944, 'CORRECTION': 332, 'NEUTRAL': 196, 'VOL_SHOCK': 19}
+2026-07-03 12:01:20,731 [INFO] 
+2026-07-03 12:01:20,731 [INFO] - Identical setup to the capped-only run (same 23 tickers, same grid, same 7 windows, same 1.5x exposure cap / 3-per-day / surprise-priority). Only addition: no new position opens on a day SPY's regim
+2026-07-03 12:01:24,755 [INFO] - Window 0: params thresh=10.0% hold=60d, IS Sharpe=9.820, OOS Sharpe=nan, OOS trades=0, FLAG (>30% IS/OOS deviation)
+2026-07-03 12:01:27,963 [INFO] - Window 1: params thresh=10.0% hold=40d, IS Sharpe=7.244, OOS Sharpe=-21.736, OOS trades=2, FLAG (>30% IS/OOS deviation)
+2026-07-03 12:01:30,530 [INFO] - Window 2: params thresh=10.0% hold=40d, IS Sharpe=0.795, OOS Sharpe=-3.295, OOS trades=4, FLAG (>30% IS/OOS deviation)
+2026-07-03 12:01:32,673 [INFO] - Window 3: params thresh=7.0% hold=40d, IS Sharpe=-0.606, OOS Sharpe=14.753, OOS trades=14, FLAG (>30% IS/OOS deviation)
+2026-07-03 12:01:34,774 [INFO] - Window 4: params thresh=7.0% hold=40d, IS Sharpe=6.799, OOS Sharpe=2.393, OOS trades=12, FLAG (>30% IS/OOS deviation)
+2026-07-03 12:01:37,266 [INFO] - Window 5: params thresh=7.0% hold=20d, IS Sharpe=5.650, OOS Sharpe=2.710, OOS trades=12, FLAG (>30% IS/OOS deviation)
+2026-07-03 12:01:39,693 [INFO] - Window 6: params thresh=7.0% hold=40d, IS Sharpe=6.263, OOS Sharpe=5.893, OOS trades=14, OK
+2026-07-03 12:01:39,811 [INFO] 
+2026-07-03 12:01:39,812 [INFO] - Sharpe=4.700  Sortino=7.484  MaxDD=2.8%  MC_DD95=6.2%  PF=1.875  WinRate=62.1%  Trades=58  (6/7 windows flagged)
+2026-07-03 12:01:41,912 [INFO] - Cost sensitivity: 0.05%->12.9%, 0.10%->12.3%, 0.15%->11.7%
+2026-07-03 12:01:41,912 [INFO] 
+2026-07-03 12:01:41,913 [INFO] | | Uncapped | Capped only | Capped + regime-filtered |
+2026-07-03 12:01:41,913 [INFO] |---|---|---|---|
+2026-07-03 12:01:41,913 [INFO] | Sharpe | 2.93 | 2.41 | 4.70 |
+2026-07-03 12:01:41,914 [INFO] | MC_DD95 | 80.1% | 13.0% | 6.2% |
+2026-07-03 12:01:41,914 [INFO] | Trades | 131 | 120 | 58 |
+2026-07-03 12:01:41,914 [INFO] | Windows flagged | 6/7 | 6/7 | 6/7 |
+2026-07-03 12:01:41,915 [INFO] | Cost@0.15% survival | +17.3% | +14.7% | +11.7% |

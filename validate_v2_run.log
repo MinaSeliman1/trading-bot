@@ -1,0 +1,21 @@
+2026-07-03 02:04:57,594 [INFO] 
+2026-07-03 02:04:57,595 [INFO] - Sampling method: `bot/sp500_pool.py`'s fixed S&P 500 reference pool (278 tickers) minus the 56 tickers already tested in round 2 direction 2 (278 remaining), drawn via `np.random.default_rng(seed=20
+2026-07-03 02:04:57,595 [INFO] - Drawn tickers: ['AMGN', 'AMP', 'AZO', 'BBWI', 'BDX', 'BLK', 'CFG', 'CHD', 'CNC', 'CTLT', 'CVS', 'DGX', 'DLTR', 'DOV', 'DPZ', 'ERIE', 'ETSY', 'EXPD', 'EXPE', 'FANG', 'GIS', 'GL', 'GRMN', 'HBAN', 'HII
+2026-07-03 02:05:01,208 [INFO] fresh S&P500 draw universe: 56/56 tickers usable
+2026-07-03 02:05:22,396 [INFO] - Fetched 56/56 tickers successfully. 28 produced a surviving anti-overfitting plateau. **2 of 56 passed all 3 viability criteria** (original universe: 7 of 56 = 12.5%; this universe: 2/56 = 3.6%).
+2026-07-03 02:05:22,396 [INFO]     PASS: FANG Sharpe=1.182 PF=3.636 MaxDD=1.9% trades=12
+2026-07-03 02:05:22,396 [INFO]     PASS: GRMN Sharpe=0.737 PF=1.961 MaxDD=4.6% trades=28
+2026-07-03 02:05:22,580 [INFO] - **Combined equal-weight portfolio of 2 passers on the FRESH universe: Sharpe=1.140** (original universe combined Sharpe was 1.896) MaxDD=2.3% MC_DD95=12.1% PF=2.310 trades=40
+2026-07-03 02:05:22,580 [INFO] - **Gate check**: combined Sharpe 1.140 vs required > 0.5 AND > 0.948 (50% of original 1.896). **PASSES the pre-declared gate.**
+2026-07-03 02:05:22,582 [INFO] 
+2026-07-03 02:05:22,583 [INFO] - Holdout window: 2020-07-27 to 2022-06-03 (~22.7 months) -- this is BEFORE the earliest train_start (2022-06-03) used anywhere in the original walk-forward, so it was never seen as train OR test data
+2026-07-03 02:05:22,583 [INFO] - Using the 7 original winning tickers' EXACT already-selected parameters, no re-fitting: {'META': {'sma_period': 20, 'std_dev_mult': 2.0, 'trend_sma_period': 200}, 'NVDA': {'sma_period': 20, 'std_dev
+2026-07-03 02:05:23,460 [INFO] holdout period universe: 7/7 tickers usable
+2026-07-03 02:05:23,466 [INFO]     META: Sharpe=-0.921 PF=0.000 MaxDD=4.1% trades=2
+2026-07-03 02:05:23,474 [INFO]     NVDA: Sharpe=-1.003 PF=0.173 MaxDD=35.2% trades=16
+2026-07-03 02:05:23,482 [INFO]     MRK: Sharpe=nan PF=nan MaxDD=0.0% trades=0
+2026-07-03 02:05:23,490 [INFO]     COP: Sharpe=0.807 PF=1.737 MaxDD=2.5% trades=12
+2026-07-03 02:05:23,499 [INFO]     NKE: Sharpe=-0.639 PF=0.599 MaxDD=8.7% trades=14
+2026-07-03 02:05:23,507 [INFO]     PYPL: Sharpe=-0.559 PF=0.247 MaxDD=4.0% trades=5
+2026-07-03 02:05:23,515 [INFO]     GE: Sharpe=0.622 PF=1.509 MaxDD=3.9% trades=13
+2026-07-03 02:05:23,520 [INFO] - **Combined portfolio on the unseen 2020-2022 holdout: Sharpe=-0.969** (original 2022-2026 combined Sharpe was 1.896) MaxDD=7.3% PF=0.557 trades=62
