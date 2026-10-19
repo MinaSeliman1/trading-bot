@@ -1,0 +1,220 @@
+// This Source Code Form is provided for research. No warranty. Not investment advice.
+//@version=6
+//
+// First Candle Rule + Fair Value Gap  -  1-minute chart, US regular session (America/New_York)
+//
+// !!! NOT COMPILED / NOT RUN !!!  This script was written without access to TradingView. Syntax and
+// behaviour must be verified by loading it in the Pine Editor. See README.md ("Pine vs Python").
+//
+// Rules (identical state machine to fcr_fvg/signals.py):
+//   1. Opening range H/L = high/low of the five 1-minute bars 09:30-09:34 (needs all five bars).
+//   2. From 09:35: LONG FVG = c1,c2,c3 consecutive 1-min bars, all starting >= 09:35, with
+//        open(c2) <= H, close(c2) > H, low(c3) > high(c1).     Zone = [high(c1), low(c3)].
+//      SHORT mirror: open(c2) >= L, close(c2) < L, high(c3) < low(c1). Zone = [high(c3), low(c1)].
+//      The FVG exists when c3 CLOSES (the script only runs on closed bars).
+//   3. Retest = a later bar whose high-low range intersects the zone, within `ttlBars` bars after c3.
+//   4. Confirmation = engulfing bar (body engulfs previous opposite-colour body) on the retest bar or
+//      the next `confirmExtra` bars.
+//   5. Market order at the close of the engulfing bar -> filled by TradingView at the NEXT bar's open.
+//      One trade per day, no new entry at/after 11:00. Several FVG candidates may be alive at once.
+//   6. Stop: variant A = extreme of retest..signal bars -/+ 1 tick ; variant B = FVG boundary -/+ 1 tick.
+//      Target = entry + 3 x initial risk (risk measured from the REAL fill price). No trailing/BE/partials.
+//   7. Flat at the last bar of the regular session.
+//
+strategy("First Candle Rule + FVG (1m)", shorttitle="FCR-FVG", overlay=true, pyramiding=0,
+         initial_capital=100000, default_qty_type=strategy.fixed, calc_on_every_tick=false,
+         process_orders_on_close=false, calc_on_order_fills=false,
+         commission_type=strategy.commission.cash_per_contract, commission_value=0.005,
+         slippage=1, margin_long=0, margin_short=0,
+         max_boxes_count=300, max_labels_count=300, max_lines_count=300)
+
+// ------------------------------------------------------------------ inputs
+stopVariant  = input.string("A", "Stop variant (A = retest extreme, B = FVG boundary)", options=["A", "B"])
+ttlBars      = input.int(15, "FVG max age for retest (bars)", minval=1)
+confirmExtra = input.int(2, "Engulfing window after retest bar (bars)", minval=0)
+rr           = input.float(3.0, "Risk / Reward", minval=0.5, step=0.5)
+bufferTicks  = input.int(1, "Stop buffer (ticks)", minval=0)
+slipTicks    = input.int(1, "Slippage assumed for SIZING (set the same in Properties > Slippage)", minval=0)
+riskPct      = input.float(0.5, "Risk per trade (% of equity)", minval=0.01, step=0.05) / 100.0
+maxLeverage  = input.float(4.0, "ETF: max notional / equity", minval=0.1)
+marginPerCt  = input.float(15000.0, "Futures: initial margin per contract (USD, exposure cap)", minval=1.0)
+marginUsage  = input.float(0.5, "Futures: max margin / equity", minval=0.01)
+commPerSide  = input.float(0.005, "Commission per share/contract per side (SIZING only; set same in Properties)", minval=0.0)
+cutoffMin    = input.int(11 * 60, "No entry at/after (minutes since midnight NY)", minval=575)
+showBoxes    = input.bool(true, "Draw FVG zones")
+
+// ------------------------------------------------------------------ constants / types
+tz = "America/New_York"
+const int OPEN_MIN = 570          // 09:30
+const int OR_BARS = 5
+
+type Cand
+    int dir
+    float zlo
+    float zhi
+    int formedTime
+    int state = 0                 // 0 = waiting for retest, 1 = retested, waiting for engulfing
+    int retestTime = 0
+    float extLo = 1.0e10
+    float extHi = -1.0e10
+    bool dead = false
+    box bx = na
+
+// ------------------------------------------------------------------ per-bar clock (all New York wall-clock)
+int mod      = hour(time, tz) * 60 + minute(time, tz)
+int idx      = mod - OPEN_MIN
+bool inRth   = idx >= 0 and idx < 390
+int dayKey   = year(time, tz) * 10000 + month(time, tz) * 100 + dayofmonth(time, tz)
+
+var int lastDayKey = 0
+bool newDay = dayKey != lastDayKey
+lastDayKey := dayKey
+
+// ------------------------------------------------------------------ persistent state
+var float orH = na
+var float orL = na
+var int orCount = 0
+var bool tradedToday = false
+var bool needExit = false
+var int pendDir = 0
+var float pendStop = na
+var float tpPx = na
+var array<Cand> cands = array.new<Cand>()
+
+if newDay
+    orH := na
+    orL := na
+    orCount := 0
+    tradedToday := false
+    needExit := false
+    for c in cands
+        if not na(c.bx)
+            box.delete(c.bx)
+    array.clear(cands)
+
+float tickSz = syminfo.mintick
+float pv     = syminfo.pointvalue
+bool isFut   = syminfo.type == "futures"
+
+// ------------------------------------------------------------------ opening range (bars 09:30..09:34 only)
+if inRth and idx < OR_BARS
+    orH := na(orH) ? high : math.max(orH, high)
+    orL := na(orL) ? low : math.min(orL, low)
+    orCount += 1
+
+bool orReady = inRth and idx >= OR_BARS and orCount == OR_BARS
+
+// ------------------------------------------------------------------ closed-bar pattern helpers (computed on EVERY bar)
+bool consec1 = time[1] == time - 60000
+bool consec2 = consec1 and time[2] == time - 120000
+bool bullEngulf = consec1 and close[1] < open[1] and close > open and open <= close[1] and close >= open[1]
+bool bearEngulf = consec1 and close[1] > open[1] and close < open and open >= close[1] and close <= open[1]
+
+bool retestNow = false
+bool signalLong = false
+bool signalShort = false
+
+// ------------------------------------------------------------------ 1. advance existing candidates (created on earlier bars)
+bool canScan = orReady and not tradedToday and strategy.position_size == 0 and idx <= (cutoffMin - OPEN_MIN) - 2
+
+if canScan and array.size(cands) > 0
+    for i = 0 to array.size(cands) - 1
+        Cand c = array.get(cands, i)
+        if not c.dead
+            int age = int((time - c.formedTime) / 60000)
+            bool proceed = true
+            if c.state == 0
+                if age > ttlBars
+                    c.dead := true
+                    proceed := false
+                else if low <= c.zhi and high >= c.zlo
+                    c.state := 1
+                    c.retestTime := time
+                    retestNow := true
+                else
+                    proceed := false
+            if proceed and not c.dead
+                int sinceRetest = int((time - c.retestTime) / 60000)
+                if sinceRetest > confirmExtra
+                    c.dead := true
+                else
+                    c.extLo := math.min(c.extLo, low)
+                    c.extHi := math.max(c.extHi, high)
+                    bool eng = c.dir == 1 ? bullEngulf : bearEngulf
+                    if eng and not tradedToday
+                        // ---- stop level (known now) ----
+                        float stopRef = stopVariant == "A" ? (c.dir == 1 ? c.extLo : c.extHi) : (c.dir == 1 ? c.zlo : c.zhi)
+                        float stopPx = c.dir == 1 ? stopRef - bufferTicks * tickSz : stopRef + bufferTicks * tickSz
+                        // entry price is only ESTIMATED (close of signal bar + slippage): the real fill is the next open
+                        float entryEst = close + c.dir * slipTicks * tickSz
+                        float riskDist = c.dir * (entryEst - stopPx)
+                        if riskDist > 0
+                            float perUnit = (riskDist / tickSz + slipTicks) * tickSz * pv + 2.0 * commPerSide
+                            float qBudget = math.floor(riskPct * strategy.equity / perUnit)
+                            float qCap = isFut ? math.floor(marginUsage * strategy.equity / marginPerCt) : math.floor(maxLeverage * strategy.equity / (entryEst * pv))
+                            float qty = math.min(qBudget, qCap)
+                            if qty >= 1
+                                pendDir := c.dir
+                                pendStop := stopPx
+                                needExit := true
+                                tradedToday := true
+                                if c.dir == 1
+                                    strategy.entry("L", strategy.long, qty=qty)
+                                    signalLong := true
+                                else
+                                    strategy.entry("S", strategy.short, qty=qty)
+                                    signalShort := true
+                                c.dead := true
+
+// ------------------------------------------------------------------ 2. new FVG whose third bar is the current (just closed) bar
+bool scanNew = orReady and not tradedToday and strategy.position_size == 0 and idx <= (cutoffMin - OPEN_MIN) - 2
+if scanNew and consec2 and (idx - 2) >= OR_BARS
+    bool bullFvg = open[1] <= orH and close[1] > orH and low > high[2]
+    bool bearFvg = open[1] >= orL and close[1] < orL and high < low[2]
+    if bullFvg or bearFvg
+        int d = bullFvg ? 1 : -1
+        float zlo = bullFvg ? high[2] : high
+        float zhi = bullFvg ? low : low[2]
+        box b = na
+        if showBoxes
+            color zc = bullFvg ? color.green : color.red
+            b := box.new(left=bar_index - 2, top=zhi, right=bar_index + ttlBars, bottom=zlo, border_color=color.new(zc, 40), bgcolor=color.new(zc, 85))
+        array.push(cands, Cand.new(dir=d, zlo=zlo, zhi=zhi, formedTime=time, bx=b))
+
+// drop dead candidates
+if array.size(cands) > 0
+    for j = array.size(cands) - 1 to 0
+        Cand cc = array.get(cands, j)
+        if cc.dead
+            array.remove(cands, j)
+
+// ------------------------------------------------------------------ 3. exits: place stop/target AFTER the entry has filled
+// The entry fills at the open of the bar after the signal. The script then runs on that bar's close, sees the real
+// fill price (strategy.position_avg_price) and places the bracket; it can therefore trigger from the NEXT bar on.
+if needExit and strategy.position_size != 0
+    float ent = strategy.position_avg_price
+    float rsk = pendDir * (ent - pendStop)
+    if rsk > 0
+        float rawTp = ent + pendDir * rr * rsk
+        tpPx := pendDir == 1 ? math.ceil(rawTp / tickSz) * tickSz : math.floor(rawTp / tickSz) * tickSz
+        if pendDir == 1
+            strategy.exit("XL", from_entry="L", stop=pendStop, limit=tpPx)
+        else
+            strategy.exit("XS", from_entry="S", stop=pendStop, limit=tpPx)
+    else
+        strategy.close_all(comment="invalid stop")
+    needExit := false
+
+// ------------------------------------------------------------------ 4. flat at the end of the regular session
+if strategy.position_size != 0 and (session.islastbar_regular or mod >= 15 * 60 + 59)
+    strategy.close_all(comment="EOD", immediately=true)
+
+// ------------------------------------------------------------------ visuals
+plot(inRth and orCount == OR_BARS ? orH : na, "Opening range high", color=color.new(color.green, 0), style=plot.style_linebr)
+plot(inRth and orCount == OR_BARS ? orL : na, "Opening range low", color=color.new(color.red, 0), style=plot.style_linebr)
+plot(strategy.position_size != 0 ? pendStop : na, "Stop", color=color.red, style=plot.style_linebr, linewidth=1)
+plot(strategy.position_size != 0 ? tpPx : na, "Target", color=color.teal, style=plot.style_linebr, linewidth=1)
+plotshape(retestNow, "Retest", shape.circle, location.belowbar, color.orange, size=size.tiny)
+plotshape(signalLong, "Long signal", shape.triangleup, location.belowbar, color.green, size=size.small)
+plotshape(signalShort, "Short signal", shape.triangledown, location.abovebar, color.red, size=size.small)
+bgcolor(inRth and idx < OR_BARS ? color.new(color.gray, 90) : na)
